@@ -1,5 +1,6 @@
 ﻿"use client"
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,32 @@ import {
 import { ContactForm } from "./ContactForm";
 
 export default function HomePage() {
+  const heroRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end end"],
+  });
+
+  const heroScroll = useSpring(scrollYProgress, {
+    stiffness: 78,
+    damping: 24,
+    mass: 0.35,
+  });
+
+  const heroBgScale = useTransform(heroScroll, [0, 0.5, 1], [1.04, 1.14, 1.24]);
+  const heroBgY = useTransform(heroScroll, [0, 1], ["0%", "-11%"]);
+  const heroBlur = useTransform(heroScroll, [0, 0.45, 1], ["blur(0px)", "blur(5px)", "blur(13px)"]);
+  const heroShadeOpacity = useTransform(heroScroll, [0, 0.48, 1], [0.52, 0.72, 0.35]);
+  const heroWhiteOpacity = useTransform(heroScroll, [0.58, 1], [0, 0.92]);
+  const heroIntroOpacity = useTransform(heroScroll, [0, 0.2, 0.39], [1, 1, 0]);
+  const heroIntroY = useTransform(heroScroll, [0, 0.39], ["0px", "-110px"]);
+  const heroIntroScale = useTransform(heroScroll, [0, 0.39], [1, 0.9]);
+  const heroDetailsOpacity = useTransform(heroScroll, [0.38, 0.58], [0, 1]);
+  const heroDetailsY = useTransform(heroScroll, [0.38, 0.78, 1], ["120px", "0px", "-38px"]);
+  const heroDetailsScale = useTransform(heroScroll, [0.38, 0.7, 1], [0.93, 1, 0.985]);
+  const heroStatsOpacity = useTransform(heroScroll, [0.62, 0.84], [0, 1]);
+  const heroStatsY = useTransform(heroScroll, [0.62, 0.9], ["70px", "0px"]);
+
   const testimonials = [
     {
       quote: "Affordable and efficient land plots, highly recommended!",
@@ -67,75 +94,89 @@ export default function HomePage() {
     <div className="w-full font-sans">
 
       {/* SECTION 1: Hero */}
-      <section className="hero-luxury relative min-h-[100svh] w-full overflow-hidden pb-12 pt-44 md:pb-16 md:pt-44">
-        <div className="hero-luxury-texture absolute inset-0 z-0" aria-hidden="true">
-          <div className="hero-luxury-glow" />
-          <div className="hero-luxury-rings" />
-          <div className="hero-luxury-grid" />
-        </div>
+      <section ref={heroRef} className="hero-luxury hero-scroll-luxury relative h-[200svh] w-full bg-[#11161a]">
+        <div className="sticky top-0 h-screen overflow-hidden">
+          <motion.div className="absolute inset-0 z-[-2]" style={{ scale: heroBgScale, y: heroBgY, filter: heroBlur }}>
+            <Image
+              src="/images/hero-bg.png"
+              alt="Royal Estates premium property skyline"
+              fill
+              priority
+              sizes="100vw"
+              className="hero-luxury-bg object-cover"
+            />
+          </motion.div>
+          <motion.div className="hero-scroll-shade absolute inset-0 z-[-1]" style={{ opacity: heroShadeOpacity }} />
+          <motion.div className="hero-white-wash absolute inset-0 z-[-1]" style={{ opacity: heroWhiteOpacity }} />
+          <div className="hero-luxury-texture absolute inset-0 z-0" aria-hidden="true">
+            <div className="hero-luxury-glow" />
+            <div className="hero-luxury-rings" />
+            <div className="hero-luxury-grid" />
+          </div>
 
-        <div className="hero-approval-badge absolute left-1/2 top-[6.75rem] z-20 inline-flex min-h-10 -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-[10px] border px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] md:top-[7.25rem] md:text-xs">
-          <span className="h-1.5 w-1.5 rounded-full" />
-          Government Approved Communities
-        </div>
+         
 
-        <div className="relative z-10 container mx-auto grid min-h-[calc(100svh-13rem)] grid-cols-1 items-center gap-14 px-4 md:px-6 lg:grid-cols-12 lg:gap-16">
           <motion.div
-            initial={false}
-            className="text-[#F7F4EE] lg:col-span-7"
+            className="hero-intro-screen pointer-events-none absolute inset-x-0 top-0 z-10 flex h-screen select-none flex-col items-center justify-center px-4 text-center"
+            style={{ opacity: heroIntroOpacity, y: heroIntroY, scale: heroIntroScale }}
           >
-            <h1 className="mb-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight md:text-5xl lg:text-[4rem]">
-              Secure Your Future.
-              <span className="block text-[#F7F4EE]">Premium 30x40 Land Plots.</span>
+            <div className="hero-reference-kicker mb-6 inline-flex items-center px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em]">
+              Welcome to Royal Estates
+            </div>
+            <h1>
+              Summer Residence
+              <span>Premium 30x40 Land Plots.</span>
             </h1>
-            <p className="mb-8 max-w-2xl text-base leading-[1.7] text-white/80 md:text-lg">
-              Royal Estates specializes in land development, offering spacious 30x40 plots covering 1200 square feet, tailored to meet your real estate and investment needs in India.
-            </p>
-            <div className="mb-9 flex flex-wrap items-center gap-4">
-              <Link
-                href="/about"
-                className="group inline-flex h-14 items-center gap-3 rounded-[10px] border border-[#F7F4EE] bg-[#F7F4EE] px-7 text-xs font-bold uppercase tracking-widest text-[#173B20] transition-colors hover:bg-transparent hover:text-[#F7F4EE]"
-              >
-                Know More About Us <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-14 items-center rounded-[10px] border border-[#F7F4EE] bg-transparent px-7 text-xs font-bold uppercase tracking-widest text-[#F7F4EE] backdrop-blur-md transition-colors hover:bg-[#F7F4EE] hover:text-[#173B20]"
-              >
-                Book A Site Visit
-              </Link>
-            </div>
-            <div className="grid max-w-3xl grid-cols-1 gap-3.5 sm:grid-cols-3">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="hero-stat-card min-h-[104px] rounded-[10px] border p-4 transition-transform duration-300 hover:-translate-y-1">
-                  <div className="text-2xl font-semibold">{stat.value}</div>
-                  <div className="mt-1.5 text-[10px] font-semibold uppercase leading-snug tracking-[0.16em] opacity-70">{stat.label}</div>
-                </div>
-              ))}
+            <div className="hero-title-rule mt-7" aria-hidden="true" />
+            <div className="hero-scroll-cue absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
+              <span>Scroll</span>
+              <i />
             </div>
           </motion.div>
 
-          <motion.div
-            initial={false}
-            className="hidden lg:col-span-5 lg:block"
-          >
-            <div className="relative ml-auto h-[560px] max-w-[520px]">
-              <div className="absolute right-0 top-0 h-[78%] w-[82%] overflow-hidden rounded-[10px] border border-[#F7F4EE]/55 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
-                <Image src="/images/about/royal-estates-consultation.png" alt="Royal Estates planning team" fill sizes="40vw" className="object-cover" />
+          <div className="relative z-10 container mx-auto flex h-screen items-center justify-center px-4 pt-36 md:px-6 md:pt-40">
+            <motion.div
+              initial={false}
+              className="hero-copy-panel mx-auto flex max-w-5xl flex-col items-center text-center text-[#F7F4EE]"
+              style={{ opacity: heroDetailsOpacity, y: heroDetailsY, scale: heroDetailsScale }}
+            >
+              <div className="hero-reference-kicker mb-6 inline-flex items-center px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em]">
+                Trusted land developer
               </div>
-              <div className="absolute bottom-0 left-0 w-[68%] rounded-[10px] border border-[#173B20] bg-[#F7F4EE] p-5 text-[#173B20] shadow-[0_24px_70px_rgba(0,0,0,0.25)]">
-                <div className="relative mb-4 h-40 overflow-hidden rounded-[7px]">
-                  <Image src="/images/projects/royal-land-plots.png" alt="Residential Property Advisory" fill sizes="28vw" className="object-cover" />
-                </div>
-                <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#173B20]">Featured Plot</div>
-                <div className="mt-2 text-2xl font-semibold leading-tight text-[#173B20]">Land Plot 30x40</div>
-                <p className="mt-2 text-sm leading-relaxed text-[#173B20]/70">1200 sq ft plot options planned for secure residential or commercial development.</p>
+              <h2 className="mb-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight md:text-5xl lg:text-[4rem]">
+                Secure Your Future.
+                <span className="block text-[#F7F4EE]">Premium 30x40 Land Plots.</span>
+              </h2>
+              <p className="mb-8 max-w-3xl text-base leading-[1.8] text-white/80 md:text-lg">
+                Royal Estates specializes in land development, offering spacious 30x40 plots covering 1200 square feet, tailored to meet your real estate and investment needs in India.
+              </p>
+              <div className="mb-9 flex flex-wrap items-center justify-center gap-4">
+                <Link
+                  href="/about"
+                  className="group inline-flex h-14 items-center gap-3 rounded-[10px] border border-[#F7F4EE] bg-[#F7F4EE] px-7 text-xs font-bold uppercase tracking-widest text-[#173B20] transition-colors hover:bg-transparent hover:text-[#F7F4EE]"
+                >
+                  Know More About Us <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex h-14 items-center rounded-[10px] border border-[#F7F4EE] bg-transparent px-7 text-xs font-bold uppercase tracking-widest text-[#F7F4EE] backdrop-blur-md transition-colors hover:bg-[#F7F4EE] hover:text-[#173B20]"
+                >
+                  Book A Site Visit
+                </Link>
               </div>
-              <div className="absolute right-6 bottom-24 rounded-[10px] border border-[#F7F4EE] bg-[#173B20] px-5 py-3 text-sm font-bold uppercase tracking-[0.14em] text-[#F7F4EE]">
-                24x7 Security
-              </div>
-            </div>
-          </motion.div>
+              <motion.div
+                className="grid w-full max-w-3xl grid-cols-1 gap-3.5 sm:grid-cols-3"
+                style={{ opacity: heroStatsOpacity, y: heroStatsY }}
+              >
+                {heroStats.map((stat) => (
+                  <div key={stat.label} className="hero-stat-card min-h-[104px] rounded-[10px] border p-4 transition-transform duration-300 hover:-translate-y-1">
+                    <div className="text-2xl font-semibold">{stat.value}</div>
+                    <div className="mt-1.5 text-[10px] font-semibold uppercase leading-snug tracking-[0.16em] opacity-70">{stat.label}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

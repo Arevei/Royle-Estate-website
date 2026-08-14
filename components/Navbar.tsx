@@ -33,6 +33,42 @@ export function Navbar() {
 
   return (
     <>
+      <div className="top-work-marquee" aria-label="Royal Estates work highlights">
+        <div className="top-work-marquee-track">
+          {[
+            "Premium 30x40 land plots",
+            "1200 sq ft plot options",
+            "500,000 sq ft area developed",
+            "1,200+ clients served",
+            "15 years active",
+            "95% on-time completion",
+            "Site visit coordination",
+            "Trusted ownership support",
+          ].concat([
+            "Premium 30x40 land plots",
+            "1200 sq ft plot options",
+            "500,000 sq ft area developed",
+            "1,200+ clients served",
+            "15 years active",
+            "95% on-time completion",
+            "Site visit coordination",
+            "Trusted ownership support",
+          ]).map((item, index) => (
+            <span key={`${item}-${index}`}>{item}</span>
+          ))}
+        </div>
+        <a
+          href="https://wa.me/917004549412"
+          target="_blank"
+          rel="noreferrer"
+          className="marquee-whatsapp"
+          aria-label="Chat with Royal Estates on WhatsApp"
+        >
+          <MessageCircle className="h-4 w-4" />
+          WhatsApp
+        </a>
+      </div>
+
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="site-header-inner">
         <Link href="/" aria-label="Royal Estates home" className="relative z-50 flex shrink-0 items-center gap-3">
@@ -79,43 +115,6 @@ export function Navbar() {
 
         </div>
       </header>
-
-      <div className="top-work-marquee" aria-label="Royal Estates work highlights">
-        <div className="top-work-marquee-track">
-          {[
-            "Premium 30x40 land plots",
-            "1200 sq ft plot options",
-            "500,000 sq ft area developed",
-            "1,200+ clients served",
-            "15 years active",
-            "95% on-time completion",
-            "Site visit coordination",
-            "Trusted ownership support",
-          ].concat([
-            "Premium 30x40 land plots",
-            "1200 sq ft plot options",
-            "500,000 sq ft area developed",
-            "1,200+ clients served",
-            "15 years active",
-            "95% on-time completion",
-            "Site visit coordination",
-            "Trusted ownership support",
-          ]).map((item, index) => (
-            <span key={`${item}-${index}`}>{item}</span>
-          ))}
-        </div>
-      </div>
-
-      <a
-        href="https://wa.me/917004549412"
-        target="_blank"
-        rel="noreferrer"
-        className="whatsapp-float"
-        aria-label="Chat with Royal Estates on WhatsApp"
-      >
-        <MessageCircle className="h-6 w-6" />
-        <span>WhatsApp</span>
-      </a>
 
       {/* Kept outside the filtered header so the surface remains fully opaque. */}
       {mobileMenuOpen && (

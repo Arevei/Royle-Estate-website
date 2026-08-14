@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Home, Landmark, MapPin, Trees, X } from "lucide-react";
+import { ArrowRight, CalendarCheck, Check, ClipboardCheck, Home, Landmark, MapPin, ShieldCheck, Trees, UsersRound } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,27 +37,42 @@ const team = [
   {
     name: "Aarav",
     role: "Founder & CEO",
-    desc: "Leading Royal Estates with passion in land development expertise.",
+    desc: "Guides buyer conversations, growth decisions, and long-term land development strategy.",
+    focus: "Client Strategy",
+    stat: "15 yrs",
     tone: "team-tone-emerald",
   },
   {
     name: "Ananya",
     role: "Development Head",
-    desc: "Oversees all land development projects ensuring quality and standards.",
+    desc: "Oversees site planning, quality checks, and project coordination from survey to delivery.",
+    focus: "Project Quality",
+    stat: "42 sites",
     tone: "team-tone-brass",
   },
   {
     name: "Vihaan",
     role: "Operations Manager",
-    desc: "Coordinates daily operations for smooth project execution.",
+    desc: "Keeps visits, documentation steps, and client updates moving with clear accountability.",
+    focus: "Operations",
+    stat: "1,200+",
     tone: "team-tone-sunset",
   },
   {
     name: "Isha",
     role: "Land Planning Expert",
-    desc: "Specializes in optimizing land plot layouts to best fit client needs.",
+    desc: "Shapes plot layouts around access, future use, sunlight, open space, and practical budgets.",
+    focus: "Plot Planning",
+    stat: "30x40",
     tone: "team-tone-olive",
   },
+];
+
+const teamHighlights = [
+  { icon: UsersRound, label: "Dedicated client desk" },
+  { icon: ShieldCheck, label: "Ownership guidance" },
+  { icon: ClipboardCheck, label: "Site visit coordination" },
+  { icon: CalendarCheck, label: "Timely project follow-up" },
 ];
 
 export default function About() {
@@ -238,19 +253,55 @@ export default function About() {
         </div>
       </section>
 
-      <section className="royal-team-section bg-white py-20 md:py-24">
+      <section className="royal-team-section py-20 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <p className="theme-kicker mb-3 text-xs font-bold uppercase tracking-[0.2em]">
-              Meet Our Dedicated Team
-            </p>
-            <h2 className="text-4xl font-bold text-zinc-800 md:text-[52px]">Committed professionals driving excellence</h2>
-            <p className="mt-4 text-base leading-relaxed text-zinc-600">
-              Committed professionals driving excellence in land development across India.
-            </p>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-5">
+              <p className="theme-kicker mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="h-px w-8" /> Meet Our Dedicated Team
+              </p>
+              <h2 className="max-w-xl text-4xl font-bold text-zinc-800 md:text-[52px]">
+                People who make every plot decision clearer.
+              </h2>
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-zinc-600">
+                A focused local team supports planning, site visits, paperwork coordination, and practical advice for every Royal Estates enquiry.
+              </p>
+            </div>
+            <div className="team-command-card lg:col-span-7">
+              <div className="relative min-h-[330px] overflow-hidden rounded-[10px]">
+                <Image
+                  src="/images/about/team-vision.png"
+                  alt="Royal Estates team planning session"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+                <div className="team-command-overlay" />
+                <div className="team-command-content">
+                  <span>Royal Estates desk</span>
+                  <strong>One team for planning, visits, and ownership support.</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {teamHighlights.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06 }}
+                className="team-highlight-tile"
+              >
+                <item.icon className="h-5 w-5" />
+                <span>{item.label}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {team.map((member, index) => (
               <motion.article
                 key={member.name}
@@ -264,14 +315,16 @@ export default function About() {
                   <span>{member.name.slice(0, 1)}</span>
                 </div>
                 <div className="team-profile-body">
+                  <div className="team-card-topline">
+                    <span>{member.focus}</span>
+                    <strong>{member.stat}</strong>
+                  </div>
                   <h3>{member.name}</h3>
                   <p className="team-role">{member.role}</p>
                   <p className="team-desc">{member.desc}</p>
-                  <div className="team-socials" aria-label={`${member.name} social links`}>
-                    <span><X className="h-4 w-4" /></span>
-                    {/* <span><Facebook className="h-4 w-4" /></span>
-                    <span><Instagram className="h-4 w-4" /></span> */}
-                  </div>
+                  <Link href="/contact" className="team-card-link">
+                    Discuss with team <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </motion.article>
             ))}
