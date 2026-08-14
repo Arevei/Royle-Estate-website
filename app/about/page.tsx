@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Home, Landmark, MapPin, Trees } from "lucide-react";
@@ -6,31 +6,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
-  { num: "2,333,520", label: "Square feet residential projects" },
-  { num: "772,785", label: "Square feet farmhouse developments" },
-  { num: "1,850+", label: "Satisfied residents" },
+  { num: "01", label: "Local Jamshedpur office" },
+  { num: "06", label: "Property service categories" },
+  { num: "100%", label: "Client-first guidance" },
 ];
 
 const highlights = [
-  "24x7 Security",
-  "Government Approved Society",
-  "Fully Gated Township",
-  "Street Lights on Every Road",
-  "Roadside Plantation",
-  "Approved Residential Plots",
-  "Beautiful Parks & Gardens",
-  "25 ft, 30 ft & 35 ft Wide Roads",
-  "Kids' Play Area",
-  "Complete Project Electrification",
-  "Primary School within the Township",
-  "Health Center for Residents",
+  "Residential Property Search",
+  "Commercial Space Guidance",
+  "Land & Plot Advisory",
+  "Rental Support",
+  "Property Selling Support",
+  "Site Visit Coordination",
+  "Budget & Locality Discussion",
+  "Buyer-Seller Communication",
+  "Documentation Coordination",
+  "Market Guidance",
+  "Owner Requirement Mapping",
+  "Transparent Next Steps",
 ];
 
 const services = [
-  { icon: Trees, title: "Gated Townships" },
-  { icon: Landmark, title: "Farmhouses" },
-  { icon: Home, title: "Villas, Flats & Builder Floors" },
-  { icon: MapPin, title: "Plots & Commercial Spaces" },
+  { icon: Trees, title: "Land & Plots" },
+  { icon: Landmark, title: "Commercial Spaces" },
+  { icon: Home, title: "Homes & Apartments" },
+  { icon: MapPin, title: "Rentals & Site Visits" },
 ];
 
 export default function About() {
@@ -39,7 +39,7 @@ export default function About() {
       <section className="inner-hero relative flex min-h-[420px] items-center justify-center pt-24 text-center">
         <Image
           src="/images/hero-bg.png"
-          alt="Doon Alliance homes"
+          alt="Royal Estates homes"
           fill
           priority
           sizes="100vw"
@@ -50,7 +50,7 @@ export default function About() {
           <p className="inner-hero-kicker mb-4 text-xs font-bold uppercase tracking-[0.24em]">
             Know More About Us
           </p>
-          <h1 className="inner-hero-title text-4xl font-bold tracking-tight md:text-6xl">Doon Alliance</h1>
+          <h1 className="inner-hero-title text-4xl font-bold tracking-tight md:text-6xl">Royal Estates</h1>
           <div className="inner-hero-breadcrumb mt-5 flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider">
             <Link href="/">
               Home
@@ -70,8 +70,8 @@ export default function About() {
             className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
           >
             <Image
-              src="/images/about/doon-construction-team.png"
-              alt="Doon Alliance construction planning team"
+              src="/images/about/royal-estates-consultation.png"
+              alt="Royal Estates property consultation team"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -79,7 +79,7 @@ export default function About() {
             <div className="about-resident-badge absolute bottom-5 left-5 p-5 shadow-xl">
               <div className="number text-4xl font-bold">1850+</div>
               <div className="label mt-1 text-xs font-bold uppercase tracking-wider">
-                Satisfied Residents
+                Guided Enquiries
               </div>
             </div>
           </motion.div>
@@ -93,13 +93,13 @@ export default function About() {
               <span className="h-px w-8" /> Who Are We?
             </p>
             <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Creating exceptional living experiences with comfort, security, and luxury.
+              Helping property clients move with clarity, confidence, and local support.
             </h2>
             <p className="mb-5 text-base leading-relaxed text-zinc-600">
-              At <strong className="text-zinc-800">Doon Alliance</strong>, we are dedicated to creating exceptional living experiences that blend comfort, security, and luxury. Operating across Delhi, Saharanpur, and beyond, we specialize in premium real estate solutions, including farmhouses, villas, residential plots, value homes, and independent living spaces.
+              At <strong className="text-zinc-800">Royal Estates</strong>, we help clients buy, sell, rent and evaluate property across Jamshedpur. Our work covers residential homes, commercial spaces, land, plots, rental requirements and seller-side support.
             </p>
             <p className="mb-8 text-base leading-relaxed text-zinc-600">
-              Our approach is rooted in transparency, efficiency, and sustainability, ensuring our clients receive tailored solutions that meet their aspirations. With over <strong className="text-zinc-800">2,333,520 square feet</strong> residential projects and <strong className="text-zinc-800">772,785 square feet</strong> farmhouse developments completed, we have built a strong reputation for delivering quality and value. Our mission is to go beyond construction. We craft vibrant communities that people are proud to call home.
+              Our approach is rooted in transparency, practical shortlisting and clear communication. From understanding your budget and preferred locality to coordinating site visits and next steps, we keep the process simple to follow.
             </p>
             <Link
               href="/contact"
@@ -139,16 +139,13 @@ export default function About() {
               <span className="h-px w-8" /> Our Vision
             </p>
             <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Redefining modern living with sustainable, high-quality real estate.
+              Redefining property guidance with a local, client-first approach.
             </h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              At Doon Alliance, our vision is simple yet profound: to redefine modern living with
-              sustainable, high-quality real estate solutions. We strive to create secure and harmonious
-              spaces that cater to diverse lifestyle needs, offering affordable luxury without compromise.
-              Our commitment to innovation and excellence drives us to develop properties that not only
-              provide value but also foster lasting happiness for generations to come. Whether you are
-              looking for a peaceful retreat, an investment opportunity, or a dream home, Doon Alliance
-              is here to make your vision a reality.
+              At Royal Estates, our vision is simple: make property decisions easier for people in
+              Jamshedpur. We help clients compare options, understand location fit, plan visits and
+              move forward with better information. Whether you are looking for a home, rental, plot,
+              commercial space or investment direction, Royal Estates is here to make the next step clear.
             </p>
           </motion.div>
           <motion.div
@@ -158,8 +155,8 @@ export default function About() {
             className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
           >
             <Image
-              src="/images/about/doon-vision-target.png"
-              alt="Doon Alliance vision and planning"
+              src="/images/about/royal-estates-vision.png"
+              alt="Royal Estates vision and planning"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -172,9 +169,9 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="theme-kicker mb-3 text-xs font-bold uppercase tracking-[0.2em]">
-              Project Highlights
+              Service Highlights
             </p>
-            <h2 className="text-3xl font-bold text-zinc-800 md:text-[44px]">Amenities Built For Community Living</h2>
+            <h2 className="text-3xl font-bold text-zinc-800 md:text-[44px]">Support Built For Property Decisions</h2>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((item, index) => (
@@ -200,9 +197,9 @@ export default function About() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="theme-dark-kicker mb-3 text-xs font-bold uppercase tracking-[0.2em]">
-              Build And Construct
+              Buy, Sell, Rent
             </p>
-            <h2 className="text-3xl font-bold md:text-[44px]">Spaces Doon Alliance Develops</h2>
+            <h2 className="text-3xl font-bold md:text-[44px]">Property Areas Royal Estates Supports</h2>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
@@ -218,8 +215,8 @@ export default function About() {
       <section className="theme-brass-section py-12">
         <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:px-6 md:text-left">
           <div>
-            <h3 className="text-2xl font-bold text-white md:text-3xl">Looking for a home, retreat, or investment?</h3>
-            <p className="mt-2 text-sm text-white/85">Doon Alliance is here to make your vision a reality.</p>
+            <h3 className="text-2xl font-bold text-white md:text-3xl">Looking for a home, commercial space, plot, or rental?</h3>
+            <p className="mt-2 text-sm text-white/85">Royal Estates is here to make your vision a reality.</p>
           </div>
           <Link
             href="/contact"
@@ -232,3 +229,4 @@ export default function About() {
     </div>
   );
 }
+

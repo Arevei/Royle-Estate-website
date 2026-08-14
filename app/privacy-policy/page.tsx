@@ -1,4 +1,4 @@
-import { FileText, Lock, Mail, ShieldCheck } from "lucide-react";
+﻿import { FileText, Lock, Mail, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 const sections = [
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
             <div className="lg:col-span-8">
               <h1 className="privacy-title text-3xl leading-tight md:text-6xl">Privacy Policy</h1>
               <p className="privacy-intro mt-6 max-w-3xl text-lg leading-relaxed">
-                Doon Alliance values your privacy. This policy explains how we collect, use and protect your personal information when you interact with our website, services or contact us.
+                Royal Estates values your privacy. This policy explains how we collect, use and protect your personal information when you interact with our website, services or contact us.
               </p>
             </div>
             <div className="privacy-info-card p-6 lg:col-span-4">
@@ -115,3 +115,4 @@ export default function PrivacyPolicy() {
     </main>
   );
 }
+

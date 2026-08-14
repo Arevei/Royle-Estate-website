@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 /* :root {
   --background: #ffffff;
@@ -31,7 +31,7 @@ body {
 
 
 /* ============================================================
-   DHARATAL GREENS — Next.js globals.css
+   ROYAL ESTATES — Next.js globals.css
    Save this file as: styles/globals.css
    Requires: Tailwind CSS v3, tailwind.config.js (see below)
    ============================================================ */
@@ -838,7 +838,7 @@ body {
 */
 
 /* ============================================================
-   DOON ALLIANCE — EDITORIAL DESIGN SYSTEM
+   ROYAL ALLIANCE — EDITORIAL DESIGN SYSTEM
    Centralized visual tokens and cross-route refinements.
    ============================================================ */
 :root {
@@ -1866,3 +1866,4 @@ section[class*="bg-[#2C2C2A]"] > div:first-child { filter: sepia(.12) saturate(.
     text-align: center;
   }
 }
+

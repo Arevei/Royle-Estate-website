@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
@@ -8,32 +8,47 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Shivalik Estate",
-    group: "Estate",
-    loc: "Ganeshpur",
-    img: "shivalik-plots.png",
-    desc: "A delivered project in Ganeshpur covering a documented project area of 150 hectares.",
+    title: "Residential Properties",
+    group: "Residential",
+    loc: "Jamshedpur",
+    img: "royal-land-plots.png",
+    desc: "Guidance for homes, flats, apartments and family-focused residential requirements.",
   },
   {
-    title: "Shakumbhari Estate",
-    group: "Estate",
-    loc: "Shakumbhari region",
-    img: "dharatal-meadows.png",
-    desc: "A planned estate development presented across multiple phases with residential plots, farmhouse areas, internal roads and green community spaces.",
+    title: "Commercial Spaces",
+    group: "Commercial",
+    loc: "Jamshedpur",
+    img: "royal-property-selling.png",
+    desc: "Support for shops, offices and business spaces based on access, usability and local context.",
   },
-  ...Array.from({ length: 10 }, (_, index) => ({
-    title: `Backwoods ${index + 1}`,
-    group: "Backwoods",
-    loc: "Wider Backwoods development area",
-    img: [
-      "green-valley-villas.png",
-      "valley-view-retreat.png",
-      "aravalli-greens.png",
-      "nilgiri-estates.png",
-      "shivalik-plots.png",
-    ][index % 5],
-    desc: `Part of the wider Backwoods and Shivalik Estate development shown within the project master plans.`,
-  })),
+  {
+    title: "Land & Plots",
+    group: "Land",
+    loc: "Jamshedpur",
+    img: "green-valley-villas.png",
+    desc: "Plot and land advisory with requirement mapping, locality comparison and visit planning.",
+  },
+  {
+    title: "Rental Support",
+    group: "Rental",
+    loc: "Jamshedpur",
+    img: "valley-view-retreat.png",
+    desc: "Support for owners and tenants looking for clearer rental conversations.",
+  },
+  {
+    title: "Investment Advisory",
+    group: "Advisory",
+    loc: "Jamshedpur",
+    img: "aravalli-greens.png",
+    desc: "Property-fit discussions for clients evaluating long-term real estate decisions.",
+  },
+  {
+    title: "Property Selling Support",
+    group: "Advisory",
+    loc: "Jamshedpur",
+    img: "nilgiri-estates.png",
+    desc: "Seller support for positioning, visits, buyer conversations and negotiation coordination.",
+  },
 ];
 
 export default function Projects() {
@@ -44,7 +59,7 @@ export default function Projects() {
     <div className="w-full bg-zinc-50 pb-20 font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Doon Alliance" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">
@@ -60,7 +75,7 @@ export default function Projects() {
       <section className="ploy-surface py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 flex flex-wrap justify-center gap-3">
-            {["All", "Estate", "Backwoods"].map((tab) => (
+            {["All", "Residential", "Commercial", "Land", "Rental", "Advisory"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -122,3 +137,4 @@ export default function Projects() {
     </div>
   );
 }
+

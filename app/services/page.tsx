@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Building2, Home, Landmark, Map, Trees, Zap } from "lucide-react";
@@ -8,33 +8,33 @@ import Link from "next/link";
 const services = [
   {
     icon: Map,
-    title: "Residential Plot Development",
-    desc: "Thoughtfully planned residential plots within gated developments featuring wide roads, green spaces and essential community infrastructure.",
+    title: "Property Search",
+    desc: "Requirement-led shortlisting for homes, apartments, commercial spaces, plots and rentals across Jamshedpur.",
   },
   {
     icon: Trees,
-    title: "Farmhouse Development",
-    desc: "Spacious farmhouse developments planned around greenery, privacy, comfort and peaceful living.",
+    title: "Land & Plot Advisory",
+    desc: "Practical support for plot and land enquiries, locality comparison and site visit planning.",
   },
   {
     icon: Landmark,
-    title: "Gated Township Planning",
-    desc: "Planning gated communities with wide roads, street lighting, green spaces and essential resident amenities.",
+    title: "Commercial Property Support",
+    desc: "Guidance for shops, offices and business spaces with focus on access, usability and local fit.",
   },
   {
     icon: Home,
-    title: "Villas & Independent Living",
-    desc: "Villas and independent living spaces planned with comfort, security, quality and long-term residential value in mind.",
+    title: "Residential Buying Support",
+    desc: "Support for buyers comparing homes, flats and apartments based on budget, family needs and location.",
   },
   {
     icon: Building2,
-    title: "Value Homes & Flats",
-    desc: "Quality living spaces designed to offer comfort, security and long-term value for residents.",
+    title: "Rental Coordination",
+    desc: "Assistance for tenants and property owners looking for smoother rental conversations.",
   },
   {
     icon: Zap,
-    title: "Community Infrastructure",
-    desc: "Roads, lighting, electrification, plantations, parks and practical amenities planned for comfortable everyday living.",
+    title: "Seller Guidance",
+    desc: "Support for owners preparing to sell, including enquiry handling, visits and negotiation coordination.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function Services() {
     <div className="w-full bg-zinc-50 pb-20 font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Doon Alliance" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">
@@ -61,7 +61,7 @@ export default function Services() {
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <div className="ploy-kicker mb-5">Supported Service Areas</div>
             <h2 className="text-4xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Real estate solutions planned around comfort, security and sustainable community living.
+              Real estate services planned around buying, selling, renting and practical property guidance.
             </h2>
           </div>
 
@@ -92,3 +92,4 @@ export default function Services() {
     </div>
   );
 }
+

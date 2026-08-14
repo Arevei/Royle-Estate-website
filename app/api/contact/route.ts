@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 type ContactPayload = {
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
       subject: text(body.subject) || "New website enquiry",
       message: text(body.message),
       submittedAt: new Date().toISOString(),
-      source: "Doon Alliance website",
+      source: "Royal Estates website",
     };
 
     if (!payload.name && !payload.email && !payload.phone && !payload.message) {
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
 
     if (sheetUrl) {
       const sheetRequestUrl = new URL(sheetUrl);
-      sheetRequestUrl.searchParams.set("sheet", process.env.SHEETDB_SHEET_NAME || "DoonAlliance");
+      sheetRequestUrl.searchParams.set("sheet", process.env.SHEETDB_SHEET_NAME || "RoyalEstates");
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 3500);
 
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
             from: process.env.CONTACT_FROM_EMAIL || process.env.SMTP_FROM || smtpUser,
             to: mailTo,
             replyTo: payload.email || undefined,
-            subject: `Doon Alliance enquiry: ${payload.subject}`,
+            subject: `Royal Estates enquiry: ${payload.subject}`,
             text: [
               `Name: ${payload.name || "-"}`,
               `Email: ${payload.email || "-"}`,
@@ -117,3 +117,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unable to send your message right now." }, { status: 500 });
   }
 }
+

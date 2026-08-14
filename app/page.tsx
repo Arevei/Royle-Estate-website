@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,34 +13,34 @@ import { ContactForm } from "./ContactForm";
 
 export default function HomePage() {
   const heroStats = [
-    { value: "2,333,520", label: "Sq. Ft. residential projects" },
-    { value: "772,785", label: "Sq. Ft. farmhouse developments" },
-    { value: "1,850+", label: "Satisfied residents" },
+    { value: "01", label: "Local Jamshedpur office" },
+    { value: "06", label: "Property service categories" },
+    { value: "100%", label: "Client-first guidance" },
   ];
 
   const featureCards = [
     {
       icon: Building,
       title: "Secure Community Living",
-      desc: "Fully gated developments designed with 24x7 security and practical community infrastructure.",
+      desc: "Property conversations handled with clear next steps, local context and responsive coordination.",
       href: "/services",
     },
     {
       icon: Globe,
-      title: "Accessible Locations",
-      desc: "Properties planned around accessible locations, natural surroundings and important regional connections.",
+      title: "Local Property Search",
+      desc: "Shortlisting support based on Jamshedpur localities, budget, access and property purpose.",
       href: "/projects",
     },
     {
       icon: Leaf,
-      title: "Green Community Planning",
-      desc: "Roadside plantations, parks, gardens and thoughtfully planned open spaces support cleaner and more harmonious living.",
+      title: "Buyer & Seller Support",
+      desc: "Assistance for property owners and buyers through enquiries, visits and negotiation stages.",
       href: "/services",
     },
     {
       icon: Cpu,
-      title: "Complete Infrastructure",
-      desc: "Wide roads, street lighting, project electrification and essential community amenities planned for comfortable everyday living.",
+      title: "Rental & Advisory Help",
+      desc: "Guidance for rentals, land, plots, commercial spaces and long-term property decisions.",
       href: "/services",
     },
   ];
@@ -71,7 +71,7 @@ export default function HomePage() {
               <span className="block text-[#F7F4EE]">Peaceful Living.</span>
             </h1>
             <p className="mb-8 max-w-2xl text-base leading-[1.7] text-white/80 md:text-lg">
-              We create exceptional living experiences across Delhi, Saharanpur and beyond through thoughtfully planned farmhouses, villas, residential plots, value homes and independent living spaces.
+              We help clients buy, sell, rent and evaluate real estate across Jamshedpur through clear local guidance, practical shortlisting, site visits and property advisory.
             </p>
             <div className="mb-9 flex flex-wrap items-center gap-4">
               <Link
@@ -103,15 +103,15 @@ export default function HomePage() {
           >
             <div className="relative ml-auto h-[560px] max-w-[520px]">
               <div className="absolute right-0 top-0 h-[78%] w-[82%] overflow-hidden rounded-[10px] border border-[#F7F4EE]/55 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
-                <Image src="/images/about/doon-construction-team.png" alt="Doon Alliance planning team" fill sizes="40vw" className="object-cover" />
+                <Image src="/images/about/royal-estates-consultation.png" alt="Royal Estates planning team" fill sizes="40vw" className="object-cover" />
               </div>
               <div className="absolute bottom-0 left-0 w-[68%] rounded-[10px] border border-[#173B20] bg-[#F7F4EE] p-5 text-[#173B20] shadow-[0_24px_70px_rgba(0,0,0,0.25)]">
                 <div className="relative mb-4 h-40 overflow-hidden rounded-[7px]">
-                  <Image src="/images/projects/shivalik-plots.png" alt="Shivalik Estate" fill sizes="28vw" className="object-cover" />
+                  <Image src="/images/projects/royal-land-plots.png" alt="Residential Property Advisory" fill sizes="28vw" className="object-cover" />
                 </div>
-                <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#173B20]">Featured Estate</div>
-                <div className="mt-2 text-2xl font-semibold leading-tight text-[#173B20]">Shivalik Estate</div>
-                <p className="mt-2 text-sm leading-relaxed text-[#173B20]/70">Documented development in Ganeshpur with planned residential layouts.</p>
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#173B20]">Featured Category</div>
+                <div className="mt-2 text-2xl font-semibold leading-tight text-[#173B20]">Residential Property Advisory</div>
+                <p className="mt-2 text-sm leading-relaxed text-[#173B20]/70">Guided support for homes, apartments, plots and family-focused property decisions.</p>
               </div>
               <div className="absolute right-6 bottom-24 rounded-[10px] border border-[#F7F4EE] bg-[#173B20] px-5 py-3 text-sm font-bold uppercase tracking-[0.14em] text-[#F7F4EE]">
                 24x7 Security
@@ -129,7 +129,7 @@ export default function HomePage() {
               <Building2 className="w-7 h-7 stroke-[1.5]" />
             </div>
             <h2 className="text-xl md:text-[26px] font-bold text-[#F1EFE8] max-w-2xl leading-tight">
-              Gated townships, farmhouses, villas, flats, plots, builder floors, and commercial spaces
+              Residential homes, commercial spaces, land, plots, rentals, and property advisory
             </h2>
           </div>
           <Button asChild variant="outline" className="text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] transition-all rounded-none  border
@@ -156,7 +156,7 @@ export default function HomePage() {
               <div className="absolute bottom-0 right-0 h-[86%] w-[82%] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/interior-living.png"
-                  alt="Doon Alliance living space"
+                  alt="Royal Estates living space"
                   fill
                   sizes="(max-width: 1024px) 82vw, 42vw"
                   className="object-cover"
@@ -167,7 +167,7 @@ export default function HomePage() {
               <div className="absolute left-0 top-0 z-10 h-[52%] w-[52%] overflow-hidden border-[12px] border-white shadow-xl">
                 <Image
                   src="/images/interior-bedroom.png"
-                  alt="Doon Alliance bedroom"
+                  alt="Royal Estates bedroom"
                   fill
                   sizes="(max-width: 1024px) 52vw, 26vw"
                   className="object-cover"
@@ -181,8 +181,8 @@ export default function HomePage() {
 
               {/* Supported resident statistic */}
               <div className="absolute bottom-16 left-6 bg-white border border-gray-100 shadow-xl p-6 flex items-center gap-5 z-20">
-                <div className="text-5xl font-bold text-[#763300] leading-none">1,850+</div>
-                <div className="text-sm font-bold leading-snug text-navy uppercase tracking-wider">Satisfied<br />Residents</div>
+                <div className="text-5xl font-bold text-[#763300] leading-none">06</div>
+                <div className="text-sm font-bold leading-snug text-navy uppercase tracking-wider">Service<br />Categories</div>
               </div>
             </motion.div>
 
@@ -195,11 +195,11 @@ export default function HomePage() {
               <div className="ploy-kicker mb-5">WHO ARE WE?</div>
               <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-8 leading-[1.1]">Premium living, planned with transparency</h2>
               <p className="text-gray-500 mb-10 leading-relaxed text-lg">
-                At Doon Alliance, we blend comfort, security, and luxury through sustainable real estate solutions. With over 2,333,520 square feet of residential projects and 772,785 square feet of farmhouse developments completed, we build communities people are proud to call home.
+                At Royal Estates, we help clients buy, sell, rent and evaluate property across Jamshedpur. Our team supports residential, commercial, land, plot, rental and seller-side requirements with clear local guidance.
               </p>
 
               <ul className="space-y-5 mb-12">
-                {["Government approved gated townships", "Farmhouses, villas, plots, flats and builder floors", "Trusted by 1850+ satisfied residents"].map((item, i) => (
+                {["Residential and commercial property support", "Land, plots, rentals and seller guidance", "Local Jamshedpur office for clear next steps"].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 font-bold text-navy text-lg">
                     <div className="w-6 h-6 rounded-full bg-[#763300] flex items-center justify-center text-white shrink-0">
                       <Check className="w-4 h-4 stroke-[3]" />
@@ -268,18 +268,18 @@ export default function HomePage() {
                 <Trophy className="w-12 h-12 text-[#763300] shrink-0 stroke-[1.5]" />
                 <div>
                   <h4 className="font-bold text-navy text-xl">Thoughtful Community Planning</h4>
-                  <p className="text-gray-500 text-sm mt-2 leading-relaxed">Carefully planned developments that bring together comfort, security, quality and sustainable living.</p>
+                  <p className="text-gray-500 text-sm mt-2 leading-relaxed">Practical guidance that brings together location fit, budget clarity, site visits and confident decision-making.</p>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-8 mt-auto">
-                <a href="tel:+919266040973" className="flex items-center gap-4">
+                <a href="tel:06572440244" className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center">
                     <Phone className="w-6 h-6 text-[#763300]" fill="currentColor" />
                   </div>
                   <div>
                     <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Call Experts</div>
-                    <div className="font-bold text-navy text-lg mt-0.5">+91 92660 40973</div>
+                    <div className="font-bold text-navy text-lg mt-0.5">0657-2440244</div>
                   </div>
                 </a>
                 <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
@@ -354,9 +354,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {[
-              { img: "shivalik-plots.png", title: "Shivalik Estate", desc: "A delivered real estate development in Ganeshpur featuring multiple planned residential layouts.", type: "ESTATE" },
-              { img: "dharatal-meadows.png", title: "Shakumbhari Estate", desc: "A large planned estate development presented across multiple phases with residential and farmhouse layouts.", type: "ESTATE" },
-              { img: "green-valley-villas.png", title: "Backwoods Development", desc: "Part of the wider Backwoods and Shivalik Estate development shown within the project master plans.", type: "MASTER PLAN" }
+              { img: "royal-land-plots.png", title: "Residential Property Advisory", desc: "Support for homes, apartments and residential plots matched to budget, location and family needs.", type: "RESIDENTIAL" },
+              { img: "royal-property-selling.png", title: "Commercial Property Advisory", desc: "Guidance for shops, offices and practical business spaces across Jamshedpur.", type: "COMMERCIAL" },
+              { img: "green-valley-villas.png", title: "Land & Rental Support", desc: "Practical help for plots, rental requirements, seller conversations and site visit planning.", type: "ADVISORY" }
             ].map((c, i) => (
               <motion.div
                 key={i}
@@ -430,7 +430,7 @@ export default function HomePage() {
                 <Quote className="absolute top-10 right-10 w-24 h-24 text-gray-100" fill="currentColor" />
 
                 <p className="text-2xl md:text-[28px] font-semibold text-navy leading-snug mb-12 relative z-10 italic">
-                  &ldquo;Very smooth experience from site visit to registration. The team is honest and professional. Doon Alliance has been the best investment for my family&apos;s future.&rdquo;
+                  &ldquo;Very smooth experience from site visit to registration. The team is honest and professional. Royal Estates has been the best investment for my family&apos;s future.&rdquo;
                 </p>
 
                 <div className="flex items-center gap-5 relative z-10 mb-2">
@@ -456,7 +456,7 @@ export default function HomePage() {
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/Pu2WhSbXIzg"
-              title="Doon Alliance Customer Review"
+              title="Royal Estates Customer Review"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
@@ -469,7 +469,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">PROJECT GLIMPSES</div>
-            <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-6">Doon Alliance Lifestyle</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-6">Royal Estates Lifestyle</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Demo visuals from our local assets show the kind of green, comfortable, and secure spaces we build.
             </p>
@@ -479,7 +479,7 @@ export default function HomePage() {
             {[
               { img: "/images/about/nature-focus.png", title: "Green community planning" },
               { img: "/images/interior-living.png", title: "Comfort-first homes" },
-              { img: "/images/projects/shivalik-plots.png", title: "Approved residential plots" },
+              { img: "/images/projects/royal-land-plots.png", title: "Approved residential plots" },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -537,8 +537,8 @@ export default function HomePage() {
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:gap-x-8 md:gap-y-12"
           >
             {[
-              { icon: Building2, text: "Gated Townships" },
-              { icon: Bed, text: "Value Homes" },
+              { icon: Building2, text: "Commercial Spaces" },
+              { icon: Bed, text: "Homes & Apartments" },
               { icon: MapPin, text: "Residential Plots" },
               { icon: Sofa, text: "Commercial Spaces" }
             ].map((item, i) => (
@@ -556,10 +556,10 @@ export default function HomePage() {
       {/* SECTION 8: Stats with Bg Images */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
         {[
-          { num: "2,333,520", label: "Residential Projects (Sq. Ft.)", bg: "stats-bg-1.png", icon: Building2 },
-          { num: "1,850+", label: "Satisfied Residents", bg: "stats-bg-3.png", icon: Smile },
-          { num: "772,785", label: "Farmhouse Developments (Sq. Ft.)", bg: "stats-bg-2.png", icon: Home },
-          { num: "24x7", label: "Security In Gated Communities", bg: "stats-bg-4.png", icon: Zap },
+          { num: "01", label: "Local Jamshedpur Office", bg: "stats-bg-1.png", icon: Building2 },
+          { num: "06", label: "Service Categories", bg: "stats-bg-3.png", icon: Smile },
+          { num: "360", label: "Degree Property Guidance", bg: "stats-bg-2.png", icon: Home },
+          { num: "Call", label: "0657-2440244", bg: "stats-bg-4.png", icon: Zap },
         ].map((stat, i) => (
           <div key={i} className="stats-card group relative flex h-72 flex-col items-center justify-center overflow-hidden p-8 text-center md:h-[380px]">
             <Image
@@ -603,27 +603,27 @@ export default function HomePage() {
             {[
               {
                 title: "Residential Plots",
-                img: "projects/shivalik-plots.png",
+                img: "projects/royal-land-plots.png",
                 icon: MapPin,
-                desc: "Thoughtfully planned residential plots within gated developments featuring wide roads, green spaces and essential community infrastructure.",
+                desc: "Property search support for homes, apartments and residential plots matched to budget, location and buyer needs.",
               },
               {
-                title: "Farmhouse Developments",
-                img: "projects/dharatal-meadows.png",
+                title: "Land & Plot Advisory",
+                img: "projects/royal-property-selling.png",
                 icon: Home,
-                desc: "Spacious farmhouse developments planned around greenery, privacy, comfort and peaceful living.",
+                desc: "Practical support for land and plot enquiries, locality comparison and site visit planning.",
               },
               {
                 title: "Flats & Apartments",
                 img: "projects/valley-view-retreat.png",
                 icon: Building2,
-                desc: "Quality living spaces designed to offer comfort, security and long-term value for residents.",
+                desc: "Support for buyers and tenants comparing homes, flats, apartments and rental spaces.",
               },
               {
-                title: "Township Development",
+                title: "Commercial & Seller Support",
                 img: "projects/green-valley-villas.png",
                 icon: Building,
-                desc: "Gated township developments planned with roads, lighting, plantations, parks and practical community amenities.",
+                desc: "Guidance for commercial spaces, property selling support, buyer conversations and negotiation coordination.",
               }
             ].map((srv, i) => (
               <motion.div
@@ -710,8 +710,8 @@ export default function HomePage() {
               </div>
               <div className="regional-presence-kicker mb-3 text-[10px] font-bold uppercase tracking-[0.24em]">Growing communities across North India</div>
               <div className="regional-presence-number text-[88px] font-semibold leading-none tracking-tight md:text-[118px]">1,850+</div>
-              <div className="regional-presence-label mt-4 px-6 py-2 text-[11px] font-bold uppercase tracking-[0.2em]">Satisfied Residents</div>
-              <div className="regional-presence-locations mt-5 text-xs font-semibold uppercase tracking-[0.16em]">Delhi <span>·</span> Saharanpur <span>·</span> Dehradun Region</div>
+              <div className="regional-presence-label mt-4 px-6 py-2 text-[11px] font-bold uppercase tracking-[0.2em]">Property Guidance</div>
+              <div className="regional-presence-locations mt-5 text-xs font-semibold uppercase tracking-[0.16em]">Bhalubasa <span>·</span> Jamshedpur <span>·</span> Jharkhand</div>
             </div>
           </motion.div>
         </div>
@@ -749,3 +749,4 @@ export default function HomePage() {
     </div>
   );
 }
+

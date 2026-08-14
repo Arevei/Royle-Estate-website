@@ -1,22 +1,22 @@
-import { FileText, Gavel, Mail, Scale } from "lucide-react";
+﻿import { FileText, Gavel, Mail, Scale } from "lucide-react";
 import Link from "next/link";
 
 const sections = [
   {
     title: "Acceptance of Terms",
-    body: "By accessing our website or engaging with services provided by Doon Alliance, you acknowledge that you have read, understood and accepted these terms in full.",
+    body: "By accessing our website or engaging with services provided by Royal Estates, you acknowledge that you have read, understood and accepted these terms in full.",
   },
   {
     title: "Services Overview",
-    body: "Doon Alliance works across farmhouses, villas, residential plots, lifestyle townships, value homes and independent living spaces. Property information may change without prior notice.",
+    body: "Royal Estates supports property search, sale, purchase, rental, residential properties, commercial spaces, land and plots. Property information may change without prior notice.",
   },
   {
     title: "Property Listings & Accuracy",
-    body: "While we strive to provide accurate and updated property information, Doon Alliance does not guarantee completeness or accuracy and will not be held responsible for discrepancies.",
+    body: "While we strive to provide accurate and updated property information, Royal Estates does not guarantee completeness or accuracy and will not be held responsible for discrepancies.",
   },
   {
     title: "Intellectual Property",
-    body: "All content, including text, images, logos and design elements, belongs to Doon Alliance or its licensors and is protected by applicable copyright laws. Reuse without permission is prohibited.",
+    body: "All content, including text, images, logos and design elements, belongs to Royal Estates or its licensors and is protected by applicable copyright laws. Reuse without permission is prohibited.",
   },
   {
     title: "User Responsibilities",
@@ -24,7 +24,7 @@ const sections = [
   },
   {
     title: "Limitation of Liability",
-    body: "Doon Alliance is not liable for any direct, indirect or incidental damages resulting from the use of our website or services.",
+    body: "Royal Estates is not liable for any direct, indirect or incidental damages resulting from the use of our website or services.",
   },
   {
     title: "Modifications",
@@ -32,7 +32,7 @@ const sections = [
   },
   {
     title: "Governing Law",
-    body: "These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Delhi.",
+    body: "These terms are governed by the laws of India. Any disputes shall be subject to the jurisdiction of courts in Jamshedpur, Jharkhand.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function TermsConditions() {
             <div className="lg:col-span-8">
               <h1 className="terms-title text-3xl leading-tight md:text-6xl">Terms & Conditions</h1>
               <p className="terms-intro mt-6 max-w-3xl text-lg leading-relaxed">
-                Welcome to Doon Alliance. By using our website and services, you agree to abide by the following terms and conditions.
+                Welcome to Royal Estates. By using our website and services, you agree to abide by the following terms and conditions.
               </p>
             </div>
             <div className="terms-info-card p-6 lg:col-span-4">
@@ -103,3 +103,4 @@ export default function TermsConditions() {
     </main>
   );
 }
+

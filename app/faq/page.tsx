@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Minus, Plus } from "lucide-react";
@@ -8,36 +8,36 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "What is Doon Alliance?",
-    a: "Doon Alliance is a trusted real estate company creating premium residential and commercial spaces across Delhi, Saharanpur and beyond. We specialize in gated townships, farmhouses, villas, flats, residential plots, builder floors, and commercial spaces.",
+    q: "What is Royal Estates?",
+    a: "Royal Estates is a real estate agency in Bhalubasa, Jamshedpur supporting property search, buying, selling, rentals, commercial spaces, land, plots and advisory requirements.",
   },
   {
-    q: "What types of properties does Doon Alliance offer?",
-    a: "Doon Alliance offers farmhouses, villas, flats, residential plots, value homes, independent living spaces, builder floors, gated townships, and commercial spaces.",
+    q: "What types of properties does Royal Estates offer?",
+    a: "Royal Estates supports residential properties, commercial spaces, land, plots, rentals, investment guidance and seller-side property conversations.",
   },
   {
-    q: "How much development has Doon Alliance completed?",
-    a: "Doon Alliance has completed over 2,333,520 square feet of residential projects and 772,785 square feet of farmhouse developments, with 1850+ satisfied residents.",
+    q: "Can Royal Estates help me shortlist properties?",
+    a: "Yes. The team starts with your budget, preferred locality, timeline and property purpose, then helps you move toward relevant options and site visits.",
   },
   {
-    q: "Why should I invest with Doon Alliance?",
-    a: "Doon Alliance focuses on transparent processes, government-approved societies, gated townships, wide roads, street lighting, green planning, and practical amenities that support both lifestyle and long-term value.",
+    q: "Why should I invest with Royal Estates?",
+    a: "Royal Estates focuses on clear communication, local guidance, practical shortlisting, site visit coordination and support through important next steps.",
   },
   {
-    q: "Is financing available for property purchases?",
-    a: "Yes, Doon Alliance offers flexible payment support for eligible property purchases. The team can explain available options during your consultation or site visit.",
+    q: "Can Royal Estates help owners sell property?",
+    a: "Yes. Property owners can discuss selling support, buyer conversations, visits, positioning and negotiation coordination.",
   },
   {
-    q: "Can I visit a Doon Alliance project before purchasing?",
-    a: "Absolutely. We encourage buyers to visit our properties to experience the quality, planning, and surroundings firsthand.",
+    q: "Can I arrange a site visit?",
+    a: "Yes. Share your requirement through the contact form or call the office, and the team can coordinate the next practical visit step.",
   },
   {
-    q: "How can I contact Doon Alliance for inquiries?",
-    a: "You can reach out through the website contact form, visit the Contact page, or use the call button below.",
+    q: "How can I contact Royal Estates for inquiries?",
+    a: "Call 0657-2440244, use the website contact form, or visit 410, 4th Floor, Sai Jambu Tower, Bhalubasa, Jamshedpur - 831009.",
   },
   {
-    q: "Are Doon Alliance properties environmentally friendly?",
-    a: "Yes, Doon Alliance emphasizes green planning through roadside plantation, parks, gardens, and sustainable community layouts designed for cleaner, healthier living.",
+    q: "Does Royal Estates provide legal or financial advice?",
+    a: "Royal Estates provides property guidance and coordination. Legal, tax or financial decisions should be verified with qualified professionals before commitment.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function FAQ() {
     <div className="w-full bg-white font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Doon Alliance" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">
@@ -118,8 +118,8 @@ export default function FAQ() {
             <p className="theme-dark-copy text-sm">Our team is ready to help you find the perfect property.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+919266040973" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
-              Call +91 92660 40973
+            <a href="tel:06572440244" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
+              Call 0657-2440244
             </a>
             <Link href="/contact" className="theme-outline-light-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
               Contact Us
@@ -130,3 +130,4 @@ export default function FAQ() {
     </div>
   );
 }
+

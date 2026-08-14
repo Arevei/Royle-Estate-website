@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -35,10 +35,10 @@ export function Navbar() {
     <>
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="site-header-inner">
-        <Link href="/" aria-label="Doon Alliance home" className="relative z-50 flex shrink-0 items-center gap-3">
+        <Link href="/" aria-label="Royal Estates home" className="relative z-50 flex shrink-0 items-center gap-3">
           <Image 
             src="/images/logo.png" 
-            alt="Doon Alliance" 
+            alt="Royal Estates" 
             width={56}
             height={56}
             className="h-12 w-auto object-contain md:h-14"
@@ -98,9 +98,10 @@ export function Navbar() {
           ))}
           </nav>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="button-primary w-full">Book a site visit <ArrowUpRight className="h-4 w-4" /></Link>
-          <a href="tel:+919266040973" className="mt-4 text-center text-sm font-semibold text-[#173B20]">+91 92660 40973</a>
+          <a href="tel:06572440244" className="mt-4 text-center text-sm font-semibold text-[#173B20]">0657-2440244</a>
         </div>
       )}
     </>
   );
 }
+
