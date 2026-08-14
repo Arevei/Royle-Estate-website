@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, MessageCircle, X } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -43,7 +43,7 @@ export function Navbar() {
             height={56}
             className="h-12 w-auto object-contain md:h-14"
           />
-          <span className="hidden border-l border-[#DED8CE] pl-3 text-[11px] font-semibold uppercase leading-tight tracking-[0.16em] text-[#6F706A] sm:block">Property with<br />purpose</span>
+          <span className="brand-wordmark">Royal Estates</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -80,6 +80,43 @@ export function Navbar() {
         </div>
       </header>
 
+      <div className="top-work-marquee" aria-label="Royal Estates work highlights">
+        <div className="top-work-marquee-track">
+          {[
+            "Premium 30x40 land plots",
+            "1200 sq ft plot options",
+            "500,000 sq ft area developed",
+            "1,200+ clients served",
+            "15 years active",
+            "95% on-time completion",
+            "Site visit coordination",
+            "Trusted ownership support",
+          ].concat([
+            "Premium 30x40 land plots",
+            "1200 sq ft plot options",
+            "500,000 sq ft area developed",
+            "1,200+ clients served",
+            "15 years active",
+            "95% on-time completion",
+            "Site visit coordination",
+            "Trusted ownership support",
+          ]).map((item, index) => (
+            <span key={`${item}-${index}`}>{item}</span>
+          ))}
+        </div>
+      </div>
+
+      <a
+        href="https://wa.me/917004549412"
+        target="_blank"
+        rel="noreferrer"
+        className="whatsapp-float"
+        aria-label="Chat with Royal Estates on WhatsApp"
+      >
+        <MessageCircle className="h-6 w-6" />
+        <span>WhatsApp</span>
+      </a>
+
       {/* Kept outside the filtered header so the surface remains fully opaque. */}
       {mobileMenuOpen && (
         <div id="mobile-navigation" className="fixed inset-0 z-40 flex flex-col px-6 pb-10 pt-28 lg:hidden">
@@ -98,7 +135,7 @@ export function Navbar() {
           ))}
           </nav>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="button-primary w-full">Book a site visit <ArrowUpRight className="h-4 w-4" /></Link>
-          <a href="tel:06572440244" className="mt-4 text-center text-sm font-semibold text-[#173B20]">0657-2440244</a>
+          <a href="tel:+917004549412" className="mt-4 text-center text-sm font-semibold text-[#173B20]">+91 70045 49412</a>
         </div>
       )}
     </>

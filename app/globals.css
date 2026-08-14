@@ -1159,6 +1159,33 @@ h1 { letter-spacing: -.04em; }
 .nav-item::after { background: var(--brass); }
 .nav-item:hover, .nav-item.is-active { color: var(--olive); }
 
+.brand-wordmark {
+  display: block;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(1.8rem, 2.4vw, 2.65rem);
+  font-weight: 700;
+  line-height: .88;
+  letter-spacing: .01em;
+  color: var(--forest);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .95rem;
+}
+
+.footer-brand-wordmark {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  font-weight: 700;
+  line-height: .9;
+  color: var(--forest);
+  white-space: nowrap;
+}
+
 .button-primary,
 a[class*="bg-[#763300]"],
 button[class*="bg-[#763300]"] {
@@ -1424,6 +1451,298 @@ button[class*="bg-[#763300]"]:hover {
 
 .regional-presence-locations span {
   color: #B5A36F !important;
+}
+
+/* Royal Estates additions: marquee, WhatsApp, testimonials carousel, and team cards. */
+.top-work-marquee {
+  position: fixed;
+  top: 88px;
+  left: 0;
+  right: 0;
+  z-index: 39;
+  height: 34px;
+  overflow: hidden;
+  border-top: 1px solid rgba(181, 163, 111, .22);
+  border-bottom: 1px solid rgba(181, 163, 111, .28);
+  background: #173B20;
+  color: #F7F4EE;
+}
+
+.top-work-marquee-track {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  height: 100%;
+  align-items: center;
+  gap: 2rem;
+  animation: royal-marquee 34s linear infinite;
+}
+
+.top-work-marquee-track span {
+  position: relative;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(247, 244, 238, .86);
+}
+
+.top-work-marquee-track span::after {
+  content: "";
+  position: absolute;
+  right: -1.15rem;
+  top: 50%;
+  width: .32rem;
+  height: .32rem;
+  border-radius: 999px;
+  background: #B5A36F;
+  transform: translateY(-50%);
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem .9rem;
+  border-radius: 999px;
+  background: #25D366;
+  color: #08261F !important;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 34px rgba(37, 211, 102, .28);
+  transform: translateY(-50%) rotate(-90deg) translateY(-72px);
+  transform-origin: right center;
+}
+
+.whatsapp-float svg {
+  transform: rotate(90deg);
+}
+
+.testimonials-carousel-section {
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  overflow: hidden;
+  padding: .5rem 0 1rem;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: testimonial-scroll 26s linear infinite;
+}
+
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-slide {
+  position: relative;
+  width: min(78vw, 360px);
+  min-height: 380px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(23, 59, 32, .12);
+  border-radius: 8px;
+  background: #F3F3F1;
+  padding: 2rem 1.7rem;
+  box-shadow: 0 18px 44px rgba(23, 59, 32, .08);
+}
+
+.testimonial-avatar {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #D8E0DF;
+  color: #8B9B9B;
+}
+
+.testimonial-quote-icon {
+  margin-top: 3.5rem;
+  width: 48px;
+  height: 48px;
+  color: #1B7A48;
+}
+
+.testimonial-copy {
+  margin-top: 2.2rem;
+  min-height: 88px;
+  color: #020807 !important;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.testimonial-person {
+  margin-top: 1.5rem;
+  border-left: 2px solid #1B7A48;
+  padding-left: .85rem;
+}
+
+.testimonial-person strong {
+  display: block;
+  color: #020807;
+  font-size: 1.2rem;
+}
+
+.testimonial-person span {
+  display: block;
+  margin-top: .2rem;
+  color: #020807;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.testimonial-stars {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.7rem;
+  display: flex;
+  gap: .2rem;
+  color: #B5A36F;
+}
+
+.team-profile-card {
+  display: grid;
+  min-height: 270px;
+  grid-template-columns: minmax(190px, .58fr) minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(23, 59, 32, .18);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(23, 59, 32, .07);
+}
+
+.team-portrait {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 270px;
+  overflow: hidden;
+}
+
+.team-portrait::before,
+.team-portrait::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+}
+
+.team-portrait::before {
+  width: 8rem;
+  height: 8rem;
+  background: rgba(255,255,255,.32);
+  filter: blur(2px);
+}
+
+.team-portrait::after {
+  bottom: -2.8rem;
+  width: 12rem;
+  height: 8rem;
+  background: rgba(0,0,0,.13);
+}
+
+.team-portrait span {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,.9);
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 6rem;
+  font-weight: 700;
+  text-shadow: 0 12px 30px rgba(0,0,0,.22);
+}
+
+.team-tone-emerald { background: linear-gradient(135deg, #164D3D, #6A927C 58%, #C0A25D); }
+.team-tone-brass { background: linear-gradient(135deg, #6B4A24, #B5A36F 55%, #F7F4EE); }
+.team-tone-sunset { background: linear-gradient(135deg, #143B4C, #B46A45 58%, #F3CA84); }
+.team-tone-olive { background: linear-gradient(135deg, #20351E, #81724C 58%, #E3C88F); }
+
+.team-profile-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.7rem;
+}
+
+.team-profile-body h3 {
+  color: #020807 !important;
+  font-size: 1.55rem;
+  font-weight: 700 !important;
+  letter-spacing: 0;
+}
+
+.team-role {
+  margin-top: .65rem;
+  color: #087544 !important;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.team-desc {
+  margin-top: 1.2rem;
+  color: #020807 !important;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.team-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.team-socials span {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  color: #020807;
+}
+
+@keyframes royal-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes testimonial-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - .75rem)); }
+}
+
+@media (max-width: 1023px) {
+  .top-work-marquee { top: 76px; }
+  .whatsapp-float {
+    top: auto;
+    right: 1rem;
+    bottom: 1rem;
+    transform: none;
+  }
+  .whatsapp-float svg { transform: none; }
+}
+
+@media (max-width: 767px) {
+  .team-profile-card {
+    grid-template-columns: 1fr;
+  }
+  .team-portrait {
+    min-height: 220px;
+  }
+  .testimonial-slide {
+    min-height: 360px;
+  }
 }
 
 /* Privacy hero uses explicit theme colors to guarantee readable legal content. */

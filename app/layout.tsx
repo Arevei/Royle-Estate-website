@@ -17,15 +17,15 @@ const cormorant = Cormorant_Garamond({
 });
 
 const description =
-  "Royal Estates is a real estate agency in Jamshedpur offering support for buying, selling, renting, residential properties, commercial spaces, land, plots and property advisory.";
+  "Royal Estates is a trusted land developer in Jamshedpur offering premium 30x40 land plots, 1200 sq ft plot options, ownership guidance, and secure investment support.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://royalestates.in"),
-  title: "Royal Estates | Real Estate Agency in Jamshedpur",
+  title: "Royal Estates | Trusted Land Developer in Jamshedpur",
   description,
   applicationName: "Royal Estates",
   openGraph: {
-    title: "Royal Estates | Real Estate Agency in Jamshedpur",
+    title: "Royal Estates | Trusted Land Developer in Jamshedpur",
     description,
     url: "https://royalestates.in",
     siteName: "Royal Estates",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Royal Estates real estate agency in Jamshedpur",
+        alt: "Royal Estates trusted land developer in Jamshedpur",
       },
     ],
     locale: "en_IN",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Royal Estates | Real Estate Agency in Jamshedpur",
+    title: "Royal Estates | Trusted Land Developer in Jamshedpur",
     description,
     images: ["/opengraph-image.jpg"],
   },

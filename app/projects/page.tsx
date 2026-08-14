@@ -8,46 +8,46 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Residential Properties",
-    group: "Residential",
+    title: "Land Plot 30x40",
+    group: "30x40",
     loc: "Jamshedpur",
     img: "royal-land-plots.png",
-    desc: "Guidance for homes, flats, apartments and family-focused residential requirements.",
+    desc: "Premium 1200 sq ft land plot options planned for future residential development.",
   },
   {
-    title: "Commercial Spaces",
-    group: "Commercial",
+    title: "Land Plot 1200 sq ft",
+    group: "1200 Sq Ft",
     loc: "Jamshedpur",
     img: "royal-property-selling.png",
-    desc: "Support for shops, offices and business spaces based on access, usability and local context.",
+    desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.",
   },
   {
-    title: "Land & Plots",
-    group: "Land",
+    title: "Custom Plot Sizes",
+    group: "Advisory",
     loc: "Jamshedpur",
     img: "green-valley-villas.png",
-    desc: "Plot and land advisory with requirement mapping, locality comparison and visit planning.",
+    desc: "Specialized 30x40 land plot guidance tailored to client needs and preferences.",
   },
   {
-    title: "Rental Support",
-    group: "Rental",
+    title: "Trusted Ownership",
+    group: "Ownership",
     loc: "Jamshedpur",
     img: "valley-view-retreat.png",
-    desc: "Support for owners and tenants looking for clearer rental conversations.",
+    desc: "Reliable service focused on clear, legal ownership support for every plot offered.",
   },
   {
-    title: "Investment Advisory",
+    title: "Secure Investment",
     group: "Advisory",
     loc: "Jamshedpur",
     img: "aravalli-greens.png",
-    desc: "Property-fit discussions for clients evaluating long-term real estate decisions.",
+    desc: "Land development guidance for clients planning secure long-term real estate investments.",
   },
   {
-    title: "Property Selling Support",
+    title: "Sustainable Practices",
     group: "Advisory",
     loc: "Jamshedpur",
     img: "nilgiri-estates.png",
-    desc: "Seller support for positioning, visits, buyer conversations and negotiation coordination.",
+    desc: "Climate-resilient land development and responsible planning practices.",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function Projects() {
       <section className="ploy-surface py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 flex flex-wrap justify-center gap-3">
-            {["All", "Residential", "Commercial", "Land", "Rental", "Advisory"].map((tab) => (
+            {["All", "30x40", "1200 Sq Ft", "Ownership", "Advisory"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}

@@ -8,33 +8,33 @@ import Link from "next/link";
 const services = [
   {
     icon: Map,
-    title: "Property Search",
-    desc: "Requirement-led shortlisting for homes, apartments, commercial spaces, plots and rentals across Jamshedpur.",
+    title: "Land Development",
+    desc: "Quality land development services for future residential and commercial possibilities in India.",
   },
   {
     icon: Trees,
-    title: "Land & Plot Advisory",
-    desc: "Practical support for plot and land enquiries, locality comparison and site visit planning.",
+    title: "30x40 Plot Planning",
+    desc: "Spacious plots covering 1200 square feet, planned around practical client needs.",
   },
   {
     icon: Landmark,
-    title: "Commercial Property Support",
-    desc: "Guidance for shops, offices and business spaces with focus on access, usability and local fit.",
+    title: "Trusted Ownership",
+    desc: "Reliable service ensuring clear, legal ownership support for all plots offered.",
   },
   {
     icon: Home,
-    title: "Residential Buying Support",
-    desc: "Support for buyers comparing homes, flats and apartments based on budget, family needs and location.",
+    title: "Secure Investment",
+    desc: "Land plot guidance for families and investors looking to secure future value.",
   },
   {
     icon: Building2,
-    title: "Rental Coordination",
-    desc: "Assistance for tenants and property owners looking for smoother rental conversations.",
+    title: "Personalized Care",
+    desc: "Responsive client service focused on satisfaction, clarity, and site visit coordination.",
   },
   {
     icon: Zap,
-    title: "Seller Guidance",
-    desc: "Support for owners preparing to sell, including enquiry handling, visits and negotiation coordination.",
+    title: "Sustainable Practices",
+    desc: "Committed to climate-resilient land development with responsible planning practices.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Services() {
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <div className="ploy-kicker mb-5">Supported Service Areas</div>
             <h2 className="text-4xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Real estate services planned around buying, selling, renting and practical property guidance.
+              Premium 30x40 land plot services planned around quality, ownership clarity, and secure investment.
             </h2>
           </div>
 

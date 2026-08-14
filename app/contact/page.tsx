@@ -7,8 +7,7 @@ import Link from "next/link";
 import { ContactForm } from "../ContactForm";
 
 const phoneNumbers = [
-  { label: "0657-2440244", href: "tel:06572440244" },
-  { label: "0657-2440244", href: "tel:06572440244" },
+  { label: "+91 70045 49412", href: "tel:+917004549412" },
 ];
 
 export default function Contact() {
@@ -50,7 +49,7 @@ export default function Contact() {
                 <div className="absolute bottom-0 left-0 right-0 p-7 text-white md:p-9">
                   <div className="theme-dark-kicker mb-3 text-xs font-bold uppercase tracking-[0.2em]">Royal Estates</div>
                   <h2 className="contact-image-title max-w-md text-2xl font-bold leading-tight md:text-3xl">
-                    Site visits, project guidance, and property support from one team.
+                    Site visits, land plot guidance, and ownership support from one team.
                   </h2>
                 </div>
               </div>
@@ -68,7 +67,7 @@ export default function Contact() {
                 Get in touch now
               </h2>
               <p className="mb-10 text-base text-gray-500">
-                We&apos;re here to help you find the perfect property.
+                We&apos;re here to help you explore premium 30x40 and 1200 sq ft land plot options.
               </p>
 
               <div className="space-y-7">
@@ -77,10 +76,10 @@ export default function Contact() {
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
-                    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Office enquiries</div>
-                    <p className="text-base font-bold text-zinc-800">
-                      Call 0657-2440244 or use the form below.
-                    </p>
+                    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Write email</div>
+                    <a href="mailto:pgoswamijmp@gmail.com" className="text-base font-bold text-zinc-800 transition-colors hover:text-[#763300]">
+                      pgoswamijmp@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -107,7 +106,7 @@ export default function Contact() {
                   <div>
                     <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Visit office</div>
                     <p className="text-base font-bold leading-relaxed text-zinc-800">
-                      410, 4th Floor, Sai Jambu Tower, Bhalubasa, Jamshedpur - 831009
+                      410, 4th Floor, Sai Jumbu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India
                     </p>
                   </div>
                 </div>
@@ -140,7 +139,7 @@ export default function Contact() {
           scrolling="no"
           marginHeight={0}
           marginWidth={0}
-          src="https://maps.google.com/maps?width=520&height=400&hl=en&q=Sai%20Jambu%20Tower%20Bhalubasa%20Jamshedpur%20831009&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+          src="https://maps.google.com/maps?width=520&height=400&hl=en&q=Sai%20Jumbu%20Tower%20Bhalubasa%20East%20Singhbhum%20831009%20Jharkhand&t=&z=14&ie=UTF8&iwloc=B&output=embed"
           style={{ display: "block", border: 0 }}
           allowFullScreen
         />

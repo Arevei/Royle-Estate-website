@@ -9,31 +9,31 @@ import { useState } from "react";
 const faqs = [
   {
     q: "What is Royal Estates?",
-    a: "Royal Estates is a real estate agency in Bhalubasa, Jamshedpur supporting property search, buying, selling, rentals, commercial spaces, land, plots and advisory requirements.",
+    a: "Royal Estates is a trusted land developer offering premium 30x40 land plots covering 1200 square feet with ownership guidance, site visit support, and responsive service.",
   },
   {
-    q: "What types of properties does Royal Estates offer?",
-    a: "Royal Estates supports residential properties, commercial spaces, land, plots, rentals, investment guidance and seller-side property conversations.",
+    q: "What plot size does Royal Estates specialize in?",
+    a: "Royal Estates specializes in 30x40 land plots covering 1200 square feet, suitable for future residential or commercial development plans.",
   },
   {
-    q: "Can Royal Estates help me shortlist properties?",
-    a: "Yes. The team starts with your budget, preferred locality, timeline and property purpose, then helps you move toward relevant options and site visits.",
+    q: "Can Royal Estates arrange a plot site visit?",
+    a: "Yes. Share your requirement through the contact form or call the office, and the team can coordinate the next practical site visit step.",
   },
   {
     q: "Why should I invest with Royal Estates?",
-    a: "Royal Estates focuses on clear communication, local guidance, practical shortlisting, site visit coordination and support through important next steps.",
+    a: "Royal Estates focuses on integrity, quality, clear ownership support, responsive communication, and dependable land-development guidance.",
   },
   {
-    q: "Can Royal Estates help owners sell property?",
-    a: "Yes. Property owners can discuss selling support, buyer conversations, visits, positioning and negotiation coordination.",
+    q: "What are the key trust metrics?",
+    a: "Royal Estates highlights 500,000 sq ft area developed, 1,200+ clients served, 15 years active, and 95% on-time completion.",
   },
   {
-    q: "Can I arrange a site visit?",
-    a: "Yes. Share your requirement through the contact form or call the office, and the team can coordinate the next practical visit step.",
+    q: "What makes the plot size ideal?",
+    a: "The 1200 sq ft size is practical and affordable for buyers planning a future home, investment, or carefully sized land holding.",
   },
   {
     q: "How can I contact Royal Estates for inquiries?",
-    a: "Call 0657-2440244, use the website contact form, or visit 410, 4th Floor, Sai Jambu Tower, Bhalubasa, Jamshedpur - 831009.",
+    a: "Call +91 70045 49412, email pgoswamijmp@gmail.com, use the website contact form, or visit 410, 4th Floor, Sai Jumbu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India.",
   },
   {
     q: "Does Royal Estates provide legal or financial advice?",
@@ -118,8 +118,8 @@ export default function FAQ() {
             <p className="theme-dark-copy text-sm">Our team is ready to help you find the perfect property.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:06572440244" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
-              Call 0657-2440244
+            <a href="tel:+917004549412" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
+              Call +91 70045 49412
             </a>
             <Link href="/contact" className="theme-outline-light-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
               Contact Us
