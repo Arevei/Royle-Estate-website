@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarCheck, Check, ClipboardCheck, Home, Landmark, MapPin, ShieldCheck, Trees, UsersRound } from "lucide-react";
+import { ArrowRight, Check, Home, Landmark, MapPin, Trees } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,8 +12,8 @@ const stats = [
 ];
 
 const highlights = [
-  "30x40 Land Plots",
-  "1200 Sq Ft Plot Size",
+  "Planned Land Parcels",
+  "Residential Plot Options",
   "Land & Plot Advisory",
   "Trusted Ownership",
   "Personalized Care",
@@ -28,8 +28,8 @@ const highlights = [
 
 const services = [
   { icon: Trees, title: "Land Development" },
-  { icon: Landmark, title: "30x40 Plot Planning" },
-  { icon: Home, title: "1200 Sq Ft Plots" },
+  { icon: Landmark, title: "Plot Planning" },
+  { icon: Home, title: "Residential Land Options" },
   { icon: MapPin, title: "Site Visits & Support" },
 ];
 
@@ -63,16 +63,9 @@ const team = [
     role: "Land Planning Expert",
     desc: "Shapes plot layouts around access, future use, sunlight, open space, and practical budgets.",
     focus: "Plot Planning",
-    stat: "30x40",
+    stat: "Layouts",
     tone: "team-tone-olive",
   },
-];
-
-const teamHighlights = [
-  { icon: UsersRound, label: "Dedicated client desk" },
-  { icon: ShieldCheck, label: "Ownership guidance" },
-  { icon: ClipboardCheck, label: "Site visit coordination" },
-  { icon: CalendarCheck, label: "Timely project follow-up" },
 ];
 
 export default function About() {
@@ -103,7 +96,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24">
+      <section className="pt-20 md:pt-24">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -135,10 +128,10 @@ export default function About() {
               <span className="h-px w-8" /> Who Are We?
             </p>
             <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Premium 30x40 land plots for secure investment.
+              Premium planned land for secure investment.
             </h2>
             <p className="mb-5 text-base leading-relaxed text-zinc-600">
-              <strong className="text-zinc-800">Royal Estates specializes in land development</strong>, offering spacious 30x40 plots covering 1200 square feet, tailored to meet your real estate needs in India.
+              <strong className="text-zinc-800">Royal Estates specializes in land development</strong>, offering practical plot options tailored to meet your real estate needs in India.
             </p>
             <p className="mb-8 text-base leading-relaxed text-zinc-600">
               Our approach is rooted in integrity, quality, and clear ownership support. From plot selection to site visits and documentation coordination, we keep the process simple to follow.
@@ -149,6 +142,44 @@ export default function About() {
             >
               Contact Us <ArrowRight className="h-4 w-4" />
             </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      
+
+      <section className="bg-gray-50 pb-20 md:pb-24">
+        <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="theme-kicker mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]">
+              <span className="h-px w-8" /> Our Vision
+            </p>
+            <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
+              To be India&apos;s premier land developer delivering quality plots.
+            </h2>
+            <p className="text-base leading-relaxed text-zinc-600">
+              Our mission is delivering quality land opportunities for every family. We combine clear
+              communication, sustainable practices, and personalized service so clients can secure
+              land with confidence.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
+          >
+            <Image
+              src="/images/about/royal-estates-vision.png"
+              alt="Royal Estates vision and planning"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </section>
@@ -170,39 +201,58 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20 md:py-24">
-        <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="theme-kicker mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]">
-              <span className="h-px w-8" /> Our Vision
-            </p>
-            <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              To be India&apos;s premier land developer delivering quality plots.
-            </h2>
-            <p className="text-base leading-relaxed text-zinc-600">
-              Our mission is delivering quality 30x40 land plots for every family. We combine clear
-              communication, sustainable practices, and personalized service so clients can secure
-              land with confidence.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
-          >
-            <Image
-              src="/images/about/royal-estates-vision.png"
-              alt="Royal Estates vision and planning"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </motion.div>
+       <section className="royal-team-section py-20 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-5">
+              <p className="theme-kicker mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]">
+                <span className="h-px w-8" /> Meet Our Dedicated Team
+              </p>
+              <h2 className="max-w-xl text-4xl font-bold text-zinc-800 md:text-[52px]">
+                People who make every plot decision clearer.
+              </h2>
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-zinc-600">
+                A focused local team supports planning, site visits, paperwork coordination, and practical advice for every Royal Estates enquiry.
+              </p>
+            </div>
+            
+          </div>
+
+        
+
+          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+            {team.map((member, index) => (
+              <motion.article
+                key={member.name}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="team-profile-card"
+              >
+                <div className="team-profile-body">
+                  <div className="team-card-topline">
+                    <span>{member.focus}</span>
+                    <strong>{member.stat}</strong>
+                  </div>
+                  <div className="team-member-head">
+                    <div className={`team-mini-avatar ${member.tone}`}>
+                      <span>{member.name.slice(0, 1)}</span>
+                    </div>
+                    <div>
+                      <h3>{member.name}</h3>
+                      <p className="team-role">{member.role}</p>
+                    </div>
+                  </div>
+                  <p className="team-desc">{member.desc}</p>
+                  <div className="team-card-index">0{index + 1}</div>
+                  <Link href="/contact" className="team-card-link">
+                    Discuss with team <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -253,84 +303,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="royal-team-section py-20 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
-            <div className="lg:col-span-5">
-              <p className="theme-kicker mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em]">
-                <span className="h-px w-8" /> Meet Our Dedicated Team
-              </p>
-              <h2 className="max-w-xl text-4xl font-bold text-zinc-800 md:text-[52px]">
-                People who make every plot decision clearer.
-              </h2>
-              <p className="mt-5 max-w-lg text-base leading-relaxed text-zinc-600">
-                A focused local team supports planning, site visits, paperwork coordination, and practical advice for every Royal Estates enquiry.
-              </p>
-            </div>
-            <div className="team-command-card lg:col-span-7">
-              <div className="relative min-h-[330px] overflow-hidden rounded-[10px]">
-                <Image
-                  src="/images/about/team-vision.png"
-                  alt="Royal Estates team planning session"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover"
-                />
-                <div className="team-command-overlay" />
-                <div className="team-command-content">
-                  <span>Royal Estates desk</span>
-                  <strong>One team for planning, visits, and ownership support.</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {teamHighlights.map((item, index) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.06 }}
-                className="team-highlight-tile"
-              >
-                <item.icon className="h-5 w-5" />
-                <span>{item.label}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-            {team.map((member, index) => (
-              <motion.article
-                key={member.name}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className="team-profile-card"
-              >
-                <div className={`team-portrait ${member.tone}`}>
-                  <span>{member.name.slice(0, 1)}</span>
-                </div>
-                <div className="team-profile-body">
-                  <div className="team-card-topline">
-                    <span>{member.focus}</span>
-                    <strong>{member.stat}</strong>
-                  </div>
-                  <h3>{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-desc">{member.desc}</p>
-                  <Link href="/contact" className="team-card-link">
-                    Discuss with team <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       <section className="theme-brass-section py-12">
         <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 text-center md:flex-row md:px-6 md:text-left">

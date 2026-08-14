@@ -36,6 +36,7 @@ export default function HomePage() {
   const heroDetailsOpacity = useTransform(heroScroll, [0.38, 0.58], [0, 1]);
   const heroDetailsY = useTransform(heroScroll, [0.38, 0.78, 1], ["120px", "0px", "-38px"]);
   const heroDetailsScale = useTransform(heroScroll, [0.38, 0.7, 1], [0.93, 1, 0.985]);
+  const heroDetailsColor = useTransform(heroScroll, [0.48, 0.78], ["#ffffff", "#173B20"]);
   const heroStatsOpacity = useTransform(heroScroll, [0.62, 0.84], [0, 1]);
   const heroStatsY = useTransform(heroScroll, [0.62, 0.9], ["70px", "0px"]);
 
@@ -51,7 +52,7 @@ export default function HomePage() {
       role: "Buyer, Pune",
     },
     {
-      quote: "Smooth process, great support acquiring 30x40 land plots.",
+      quote: "Smooth process, great support choosing the right plot.",
       name: "Arjun",
       role: "Buyer, Hyderabad",
     },
@@ -124,8 +125,8 @@ export default function HomePage() {
               Welcome to Royal Estates
             </div>
             <h1>
-              Summer Residence
-              <span>Premium 30x40 Land Plots.</span>
+              Royal Estates
+              <span>Planned land for tomorrow&apos;s living.</span>
             </h1>
             <div className="hero-title-rule mt-7" aria-hidden="true" />
             <div className="hero-scroll-cue absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
@@ -138,17 +139,17 @@ export default function HomePage() {
             <motion.div
               initial={false}
               className="hero-copy-panel mx-auto flex max-w-5xl flex-col items-center text-center text-[#F7F4EE]"
-              style={{ opacity: heroDetailsOpacity, y: heroDetailsY, scale: heroDetailsScale }}
+              style={{ opacity: heroDetailsOpacity, y: heroDetailsY, scale: heroDetailsScale, color: heroDetailsColor }}
             >
               <div className="hero-reference-kicker mb-6 inline-flex items-center px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em]">
                 Trusted land developer
               </div>
               <h2 className="mb-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight md:text-5xl lg:text-[4rem]">
                 Secure Your Future.
-                <span className="block text-[#F7F4EE]">Premium 30x40 Land Plots.</span>
+                <span className="block text-[#F7F4EE]">Premium Land Plots.</span>
               </h2>
               <p className="mb-8 max-w-3xl text-base leading-[1.8] text-white/80 md:text-lg">
-                Royal Estates specializes in land development, offering spacious 30x40 plots covering 1200 square feet, tailored to meet your real estate and investment needs in India.
+                Royal Estates helps families and investors choose well-planned land with clear guidance, responsive site visit support, and dependable ownership coordination.
               </p>
               <div className="mb-9 flex flex-wrap items-center justify-center gap-4">
                 <Link
@@ -188,7 +189,7 @@ export default function HomePage() {
               <Building2 className="w-7 h-7 stroke-[1.5]" />
             </div>
             <h2 className="text-xl md:text-[26px] font-bold text-[#F1EFE8] max-w-2xl leading-tight">
-              Premium 30x40 land plots, 1200 sq ft plot options, and trusted ownership support
+              Premium land opportunities, planned communities, and trusted ownership support
             </h2>
           </div>
           <Button asChild variant="outline" className="text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] transition-all rounded-none  border
@@ -254,11 +255,11 @@ export default function HomePage() {
               <div className="ploy-kicker mb-5">TRUSTED LAND DEVELOPER</div>
               <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-8 leading-[1.1]">Quality land plots planned with transparency</h2>
               <p className="text-gray-500 mb-10 leading-relaxed text-lg">
-                At Royal Estates, we provide spacious 30x40 land plots covering 1200 square feet for families, investors, and future residential or commercial development. Our approach focuses on clear ownership support, responsive service, and dependable land-development guidance.
+                At Royal Estates, we provide thoughtfully planned land options for families, investors, and future residential or commercial development. Our approach focuses on clear ownership support, responsive service, and dependable land-development guidance.
               </p>
 
               <ul className="space-y-5 mb-12">
-                {["Premium 30x40 plots covering 1200 sq ft", "Clear ownership support and responsive service", "Local Jamshedpur office for site visits and guidance"].map((item, i) => (
+                {["Well-planned plots for future homes", "Clear ownership support and responsive service", "Local Jamshedpur office for site visits and guidance"].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 font-bold text-navy text-lg">
                     <div className="w-6 h-6 rounded-full bg-[#763300] flex items-center justify-center text-white shrink-0">
                       <Check className="w-4 h-4 stroke-[3]" />
@@ -413,9 +414,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {[
-              { img: "royal-land-plots.png", title: "Land Plot 30x40", desc: "Premium 1200 sq ft land plot options planned for secure residential development.", type: "30x40 PLOT" },
+              { img: "royal-land-plots.png", title: "Residential Land Plot", desc: "Premium land options planned for secure residential development.", type: "PLOT" },
               { img: "royal-property-selling.png", title: "Land Plot 1200 sq ft", desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.", type: "1200 SQ FT" },
-              { img: "green-valley-villas.png", title: "Custom Plot Guidance", desc: "Specialized in 30x40 land plots tailored to client needs and preferences.", type: "ADVISORY" }
+              { img: "green-valley-villas.png", title: "Custom Plot Guidance", desc: "Land guidance tailored to client needs, location goals, and preferences.", type: "ADVISORY" }
             ].map((c, i) => (
               <motion.div
                 key={i}
@@ -456,11 +457,13 @@ export default function HomePage() {
       {/* SECTION 6: Testimonials Carousel */}
       <section className="testimonials-carousel-section py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-14 text-center">
-            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">What Clients Say</div>
-            <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-5 leading-[1.1]">Hear from our satisfied buyers</h2>
-            <p className="text-gray-500 text-lg max-w-3xl mx-auto">
-              Hear from our satisfied buyers about their experiences acquiring land plots.
+          <div className="testimonial-heading mb-14 grid grid-cols-1 gap-6 md:grid-cols-12 md:items-end">
+            <div className="md:col-span-7">
+              <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">What Clients Say</div>
+              <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-0 leading-[1.1]">Real conversations. Clearer property decisions.</h2>
+            </div>
+            <p className="text-gray-500 text-lg max-w-xl md:col-span-5 md:ml-auto">
+              Buyers value practical guidance, quick responses, and a simple path from enquiry to site visit.
             </p>
           </div>
 
@@ -468,19 +471,21 @@ export default function HomePage() {
             <div className="testimonial-track">
               {testimonials.concat(testimonials).map((item, index) => (
                 <article key={`${item.name}-${index}`} className="testimonial-slide">
-                  <div className="testimonial-avatar">
-                    <User className="h-8 w-8" />
+                  <div className="testimonial-card-top">
+                    <div className="testimonial-avatar">
+                      <User className="h-6 w-6" />
+                    </div>
+                    <div className="testimonial-stars">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} className="h-4 w-4 fill-current" />
+                      ))}
+                    </div>
                   </div>
                   <Quote className="testimonial-quote-icon" fill="currentColor" />
                   <p className="testimonial-copy">{item.quote}</p>
                   <div className="testimonial-person">
                     <strong>{item.name}</strong>
                     <span>{item.role}</span>
-                  </div>
-                  <div className="testimonial-stars">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="h-4 w-4 fill-current" />
-                    ))}
                   </div>
                 </article>
               ))}
@@ -503,7 +508,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { img: "/images/about/nature-focus.png", title: "1200 sq feet land plot landscape" },
-              { img: "/images/interior-living.png", title: "Aerial view of 30x40 land plots" },
+              { img: "/images/interior-living.png", title: "Aerial view of planned land parcels" },
               { img: "/images/projects/royal-land-plots.png", title: "Land survey and marking in progress" },
             ].map((item, i) => (
               <motion.div
@@ -562,7 +567,7 @@ export default function HomePage() {
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:gap-x-8 md:gap-y-12"
           >
             {[
-              { icon: Building2, text: "Quality 30x40 Plots" },
+              { icon: Building2, text: "Quality Land Parcels" },
               { icon: Bed, text: "1200 sq ft Land" },
               { icon: MapPin, text: "Trusted Ownership" },
               { icon: Sofa, text: "Sustainable Practices" }
@@ -636,10 +641,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Land Plot 30x40",
+                title: "Residential Land Plot",
                 img: "projects/royal-land-plots.png",
                 icon: MapPin,
-                desc: "Premium 30x40 land plots covering 1200 square feet, planned for future residential development.",
+                desc: "Premium land parcels planned for future residential development and secure ownership.",
               },
               {
                 title: "Trusted Ownership",
@@ -651,7 +656,7 @@ export default function HomePage() {
                 title: "Custom Plot Sizes",
                 img: "projects/valley-view-retreat.png",
                 icon: Building2,
-                desc: "Specialized in 30x40 land plots tailored to client needs, site goals, and preferences.",
+                desc: "Plot guidance tailored to client needs, site goals, and long-term preferences.",
               },
               {
                 title: "Sustainable Practices",
@@ -702,7 +707,7 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">GET TO KNOW US ——</div>
-            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-10 leading-[1.1]">Quality 30x40 land plots for every family</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-10 leading-[1.1]">Quality land options for every family</h2>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <div className="bg-white border border-gray-100 shadow-md px-6 py-4 rounded-full flex items-center gap-4 font-bold text-navy text-sm w-fit">
@@ -761,7 +766,7 @@ export default function HomePage() {
 
             <div className="lg:col-span-7 py-24">
               <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">BOOK YOUR LAND PLOT NOW ——</div>
-              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-12">Schedule your 30x40 or 1200 sq ft plot enquiry</h2>
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-12">Schedule your plot enquiry or site visit</h2>
 
               <ContactForm />
             </div>

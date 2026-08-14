@@ -36,8 +36,8 @@ export function Navbar() {
       <div className="top-work-marquee" aria-label="Royal Estates work highlights">
         <div className="top-work-marquee-track">
           {[
-            "Premium 30x40 land plots",
-            "1200 sq ft plot options",
+            "Premium land opportunities",
+            "Planned residential communities",
             "500,000 sq ft area developed",
             "1,200+ clients served",
             "15 years active",
@@ -45,8 +45,8 @@ export function Navbar() {
             "Site visit coordination",
             "Trusted ownership support",
           ].concat([
-            "Premium 30x40 land plots",
-            "1200 sq ft plot options",
+            "Premium land opportunities",
+            "Planned residential communities",
             "500,000 sq ft area developed",
             "1,200+ clients served",
             "15 years active",
