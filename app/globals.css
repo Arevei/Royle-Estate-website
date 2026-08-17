@@ -4151,3 +4151,21 @@ body, .ploy-surface, main { background: var(--ivory) !important; color: var(--in
 .property-type-pill, .service-card-icon, .stats-card-label.highlight-label, .project-card-label { background: var(--brass) !important; color: var(--forest) !important; }
 img { transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .35s ease; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* Quality section — editorial property collage */
+.quality-collage-main { border-radius: 1.25rem 0 1.25rem 0; }
+.quality-collage-main img, .quality-collage-secondary img { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .45s ease; }
+.quality-collage-main:hover img { transform: scale(1.06); filter: saturate(1.12) contrast(1.04); }
+.quality-collage-secondary:hover img { transform: scale(1.08); }
+.quality-collage-wash { background: linear-gradient(180deg, transparent 38%, rgba(7,59,42,.9) 100%); }
+.quality-trust-seal { background: var(--brass); color: var(--forest); border: 5px solid var(--ivory); outline: 1px solid rgba(200,155,60,.55); }
+.quality-stat { background: var(--surface); color: var(--forest); border-left: 4px solid var(--brass); border-radius: 0 .75rem .75rem 0; }
+.quality-stat > div:first-child { color: var(--brass); font-family: var(--font-cormorant), serif; }
+.quality-vertical-label { color: var(--emerald); }
+@media (max-width: 767px) {
+  .quality-collage-main { border-radius: 1rem 0 1rem 0; }
+  .quality-trust-seal { top: 2rem; right: 1rem; height: 4.5rem; width: 4.5rem; border-width: 3px; }
+  .quality-trust-seal svg { height: 1.25rem; width: 1.25rem; }
+  .quality-stat { bottom: 2rem; left: 1rem; padding: .85rem 1rem; gap: .75rem; }
+  .quality-stat > div:first-child { font-size: 2.5rem; }
+}

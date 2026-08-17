@@ -208,8 +208,8 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="relative h-[520px] w-full mt-10 md:mt-0"
             >
-              {/* Main living room image */}
-              <div className="absolute bottom-0 right-0 h-[86%] w-[82%] overflow-hidden shadow-2xl">
+              {/* Signature property collage */}
+              <div className="quality-collage-main absolute bottom-0 right-0 h-[86%] w-[82%] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/interior-living.png"
                   alt="Royal Estates living space"
@@ -217,10 +217,22 @@ export default function HomePage() {
                   sizes="(max-width: 1024px) 82vw, 42vw"
                   className="object-cover"
                 />
+                <div className="quality-collage-wash absolute inset-0" />
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
+                  <div>
+                    <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.28em] text-[#C89B3C]">Royal standard</span>
+                    <span className="font-serif text-3xl leading-none">Built around trust</span>
+                  </div>
+                  <ArrowRight className="mb-1 h-5 w-5 text-[#C89B3C]" />
+                </div>
               </div>
 
               {/* Overlapping bedroom image */}
-              <div className="absolute left-0 top-0 z-10 h-[52%] w-[52%] overflow-hidden border-[12px] border-white shadow-xl">
+              <motion.div
+                whileHover={{ rotate: -1, y: -6 }}
+                transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                className="quality-collage-secondary absolute left-0 top-0 z-10 h-[52%] w-[52%] overflow-hidden border-[10px] border-[var(--ivory)] shadow-xl"
+              >
                 <Image
                   src="/images/interior-bedroom.png"
                   alt="Royal Estates bedroom"
@@ -228,18 +240,25 @@ export default function HomePage() {
                   sizes="(max-width: 1024px) 52vw, 26vw"
                   className="object-cover"
                 />
-              </div>
+                <div className="absolute inset-0 border border-white/20" />
+              </motion.div>
 
-              {/* Teal building icon card */}
-              <div className="absolute top-12 right-6 bg-[#763300] w-24 h-24 flex items-center justify-center shadow-lg z-20">
-                <Building className="w-12 h-12 text-white stroke-[1.5]" />
-              </div>
+              {/* Trust seal */}
+              <motion.div
+                whileHover={{ rotate: 8, scale: 1.06 }}
+                className="quality-trust-seal absolute top-12 right-6 z-20 flex h-24 w-24 flex-col items-center justify-center rounded-full shadow-lg"
+              >
+                <Building className="mb-1 h-8 w-8 stroke-[1.5]" />
+                <span className="text-[9px] font-bold uppercase tracking-[0.16em]">Verified</span>
+              </motion.div>
 
-              {/* Supported resident statistic */}
-              <div className="absolute bottom-16 left-6 bg-white border border-gray-100 shadow-xl p-6 flex items-center gap-5 z-20">
-                <div className="text-5xl font-bold text-[#763300] leading-none">06</div>
-                <div className="text-sm font-bold leading-snug text-navy uppercase tracking-wider">Service<br />Categories</div>
-              </div>
+              {/* Service statistic */}
+              <motion.div whileHover={{ y: -5 }} className="quality-stat absolute bottom-16 left-6 z-20 flex items-center gap-5 p-5 shadow-xl">
+                <div className="text-5xl font-bold leading-none">06</div>
+                <div className="text-xs font-bold leading-snug uppercase tracking-[0.16em]">Service<br />Categories</div>
+              </motion.div>
+
+              <div className="quality-vertical-label absolute -right-7 top-1/2 hidden -translate-y-1/2 rotate-90 text-[10px] font-bold uppercase tracking-[0.35em] lg:block">Plan • Own • Prosper</div>
             </motion.div>
 
             {/* Right: Text Content */}
