@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import {
   Building2, ArrowRight, Check, MapPin, Star,
   Building, Home,
   Store, Phone, Globe, Leaf, Cpu, Quote,
-  User, Bed, Sofa, Smile, Zap, Search
+  User, Bed, Sofa, Smile, Zap
 } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 

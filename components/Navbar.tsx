@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -61,7 +61,7 @@ export function Navbar() {
 
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="site-header-inner">
-        <Link href="/" aria-label="Royal Estates home" className="relative z-50 flex shrink-0 items-center gap-3">
+        <Link href="/" aria-label="Royal Estates home" className="brand-lockup relative z-50 flex shrink-0 items-center gap-3">
           <Image 
             src="/images/logo.png" 
             alt="Royal Estates" 

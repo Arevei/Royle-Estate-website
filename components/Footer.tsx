@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
 
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Column 1: Brand */}
           <div className="space-y-6">
-            <Link href="/" className="footer-brand-link rounded-xl bg-white p-3">
+            <Link href="/" className="footer-brand-link">
               <Image src="/images/logo.png" alt="Royal Estates" width={56} height={56} className="h-14 w-auto" />
               <span className="footer-brand-wordmark">Royal Estates</span>
             </Link>
