@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import {
   Building2, ArrowRight, Check, MapPin, Star,
   Building, Home,
-  Store, Trophy, Phone, Globe, Leaf, Cpu, Quote,
-  User, Bed, Sofa, Smile, Zap
+  Store, Phone, Globe, Leaf, Cpu, Quote,
+  User, Bed, Sofa, Smile, Zap, Search
 } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
@@ -145,7 +145,7 @@ export default function HomePage() {
           <div className="relative z-10 container mx-auto flex h-screen items-center justify-center px-4 pt-36 md:px-6 md:pt-40">
             <motion.div
               initial={false}
-              className="hero-copy-panel mx-auto flex max-w-5xl flex-col items-center text-center text-[#F7F4EE]"
+              className=" mx-auto flex max-w-5xl flex-col items-center text-center text-[#F7F4EE]"
               style={{ opacity: heroDetailsOpacity, y: heroDetailsY, scale: heroDetailsScale, color: heroDetailsColor }}
             >
               <div className="hero-reference-kicker mb-6 inline-flex items-center px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em]">
@@ -153,21 +153,21 @@ export default function HomePage() {
               </div>
               <h2 className="mb-6 max-w-5xl text-4xl font-black leading-[0.98] tracking-tight md:text-5xl lg:text-[4rem]">
                 Secure Your Future.
-                <span className="block text-[#F7F4EE]">Premium Land Plots.</span>
+                <span className="block ">Premium Land Plots.</span>
               </h2>
-              <p className="mb-8 max-w-3xl text-base leading-[1.8] text-white/80 md:text-lg">
+              <p className="mb-8 max-w-3xl text-base leading-[1.8] text-grey/80 md:text-lg">
                 Royal Estates helps families and investors choose well-planned land with clear guidance, responsive site visit support, and dependable ownership coordination.
               </p>
               <div className="mb-9 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/about"
-                  className="group inline-flex h-14 items-center gap-3 rounded-[10px] border border-[#F7F4EE] bg-[#F7F4EE] px-7 text-xs font-bold uppercase tracking-widest text-[#173B20] transition-colors hover:bg-transparent hover:text-[#F7F4EE]"
+                  className="group inline-flex h-14 items-center gap-3 rounded-[10px] border border-[#F7F4EE] bg-[#F7F4EE] px-7 text-xs font-bold uppercase tracking-widest text-[#173B20] transition-colors  hover:bg-[#F7F4EE]"
                 >
                   Know More About Us <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex h-14 items-center rounded-[10px] border border-[#F7F4EE] bg-transparent px-7 text-xs font-bold uppercase tracking-widest text-[#F7F4EE] backdrop-blur-md transition-colors hover:bg-[#F7F4EE] hover:text-[#173B20]"
+                  className="inline-flex h-14 items-center rounded-[10px] border border-[#F7F4EE] bg-[#ba7517] px-7 text-xs font-bold uppercase tracking-widest text-[#F7F4EE] backdrop-blur-md transition-colors hover:bg-[#F7F4EE] hover:text-[#173B20]"
                 >
                   Book A Site Visit
                 </Link>
@@ -274,7 +274,7 @@ export default function HomePage() {
           </div>
 
           {/* Bottom Tabs */}
-          <div className="grid grid-cols-2 md:grid-cols-4 w-full mt-32 overflow-hidden rounded-lg border border-zinc-900/10 bg-white shadow-[0_18px_48px_rgba(23,52,4,0.07)]">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full mt-32 overflow-hidden rounded-lg border border-zinc-900/10 bg-white  shadow-[0_18px_48px_rgba(23,52,4,0.07)]">
             {[
               { icon: Building2, label: "Apartment" },
               { icon: Home, label: "Villa" },
@@ -285,7 +285,7 @@ export default function HomePage() {
                 key={i}
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className={`group text-zinc-900 transition-colors duration-200 hover:bg-[#1a1a1a] hover:text-white ${i !== 0 ? 'border-l border-zinc-900/10' : ''}`}
+                className={`group text-zinc-900 transition-colors duration-200 bg-[#1a1a1a]   hover:text-white ${i !== 0 ? 'border-l border-zinc-900/10 ' : ''}`}
               >
                 <Link href="/projects" className="py-12 flex flex-col items-center justify-center gap-4">
                   <item.icon className="w-12 h-12 text-zinc-900 group-hover:text-[#ba7517] stroke-[1.5] transition-colors" />
@@ -478,7 +478,7 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">PROJECT GLIMPSES</div>
+            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">Gallary</div>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-6">Royal Estates Lifestyle</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Demo visuals from our local assets show the kind of green, comfortable, and secure spaces we build.
@@ -504,6 +504,51 @@ export default function HomePage() {
                 <h3 className="absolute bottom-8 left-8 right-8 text-xl font-bold text-white">{item.title}</h3>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 7: Reference-inspired middle search hero */}
+      <section className="middle-dream-section py-24 md:py-28">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="middle-dream-shell">
+            <div className="middle-floating-card middle-floating-card-1">
+              <div className="middle-floating-card-media">
+                <Image src="/images/projects/royal-land-plots.png" alt="Royal Estates residential land plot" fill sizes="220px" className="object-cover" />
+              </div>
+              <div className="middle-floating-card-body">
+                <strong>1200 sq ft</strong>
+                <span>Residential Land Plot</span>
+                <small>Site visit ready</small>
+              </div>
+            </div>
+            <div className="middle-floating-card middle-floating-card-2">
+              <div className="middle-floating-card-media">
+                <Image src="/images/projects/royal-property-selling.png" alt="Royal Estates property guidance" fill sizes="220px" className="object-cover" />
+              </div>
+              <div className="middle-floating-card-body">
+                <strong>500K sq ft</strong>
+                <span>Area developed</span>
+                <small>Clear ownership support</small>
+              </div>
+            </div>
+            <div className="middle-quote-card">
+              <Quote className="h-5 w-5" fill="currentColor" />
+              <p>Clear guidance, responsive support, and practical site visit coordination.</p>
+            </div>
+
+            <div className="middle-dream-content">
+              <div className="middle-trust-pill">
+                <span>500K+</span>
+                <span>Planned with trusted land support</span>
+              </div>
+              <h2>Your land decision is closer than it feels</h2>
+              <p>
+                Discover well-planned Royal Estates plots with practical guidance, local support, and a simpler path from enquiry to site visit.
+              </p>
+
+              
+            </div>
           </div>
         </div>
       </section>
@@ -674,7 +719,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 10: Outstanding Way of Luxury Life */}
-      <section className="know-us-panel-section py-24 md:py-28 overflow-hidden">
+      {/* <section className="know-us-panel-section py-24 md:py-28 overflow-hidden">
         <div className="container mx-auto grid grid-cols-1 gap-5 px-4 md:px-6 lg:grid-cols-[1.2fr_.8fr] lg:items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -719,9 +764,39 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
+      </section> */}
+
+      {/* SECTION 11: Next Move CTA */}
+      <section className="next-move-section py-24 md:py-28">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="next-move-shell">
+            <div className="next-move-copy ">
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] ">Let&apos;s Make Your Next Move, <span>Your Best Move</span></h2>
+              <p>
+                Move from browsing to a real site visit with Royal Estates. Share your requirement and our team will help you understand the next practical step.
+              </p>
+            </div>
+            <Button asChild className="next-move-cta">
+              <Link href="/contact">Schedule a visit <ArrowRight className="h-4 w-4" /></Link>
+            </Button>
+            <div className="next-move-gallery" aria-hidden="true">
+              {[
+                "/images/projects/royal-land-plots.png",
+                "/images/projects/royal-property-selling.png",
+                "/images/projects/green-valley-villas.png",
+                "/images/projects/valley-view-retreat.png",
+                "/images/projects/aravalli-greens.png",
+              ].map((img, index) => (
+                <div key={img} className={`next-move-thumb next-move-thumb-${index + 1}`}>
+                  <Image src={img} alt="" fill sizes="180px" className="object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* SECTION 11: Contact (Get in Touch) */}
+      {/* SECTION 12: Contact (Get in Touch) */}
       <section className="ploy-surface py-0 relative overflow-hidden">
         {/* Subtle Diamond background shape */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-white rotate-45 -z-10 shadow-2xl" />
