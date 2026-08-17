@@ -1139,12 +1139,12 @@ body {
 }
 
 h1, h2, h3, .font-serif {
-  font-family: var(--font-cormorant), Georgia, serif !important;
-  font-weight: 500 !important;
-  letter-spacing: -.025em;
+  font-family: var(--font-manrope), sans-serif !important;
+  font-weight: 760 !important;
+  letter-spacing: -.045em;
 }
 
-h1 { letter-spacing: -.04em; }
+h1 { letter-spacing: -.055em; }
 
 ::selection { background: rgba(181, 163, 111, .45); color: var(--forest); }
 :focus-visible { outline-color: var(--brass); }
@@ -1788,6 +1788,212 @@ button[class*="bg-[#763300]"]:hover {
 
   .offering-service-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Modern real-estate polish inspired by the reference UI, using the Royal Estates palette. */
+.site-header {
+  margin-inline: auto;
+}
+
+.site-header-inner {
+  width: min(100% - 2rem, 1180px) !important;
+}
+
+.nav-item {
+  font-size: 11px;
+  letter-spacing: .04em !important;
+  text-transform: none;
+}
+
+.button-primary,
+.know-us-cta,
+.vision-cta {
+  border-radius: 999px !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
+}
+
+.hero-intro-screen h1,
+.hero-copy-panel h1,
+.hero-copy-panel h2 {
+  font-family: var(--font-manrope), sans-serif !important;
+  letter-spacing: -.06em !important;
+  text-transform: none !important;
+}
+
+.hero-intro-screen h1 {
+  max-width: min(54rem, 92vw);
+  font-weight: 780 !important;
+  line-height: .96 !important;
+}
+
+.hero-intro-screen h1 span {
+  margin-top: .85rem;
+  font-family: var(--font-manrope), sans-serif !important;
+  font-style: normal;
+  font-weight: 650;
+  letter-spacing: -.04em !important;
+  opacity: .82;
+}
+
+.hero-copy-panel {
+  position: relative;
+  max-width: 58rem !important;
+}
+
+.hero-copy-panel::before {
+  content: "";
+  position: absolute;
+  inset: -2.5rem -3rem;
+  z-index: -1;
+  border: 1px solid rgba(238, 234, 224, .26);
+  border-radius: 28px;
+  background: rgba(238, 234, 224, .1);
+  box-shadow: 0 28px 90px rgba(41, 47, 27, .16);
+  backdrop-filter: blur(18px);
+}
+
+.hero-copy-panel h2 {
+  font-size: clamp(3rem, 7vw, 6.7rem) !important;
+  font-weight: 780 !important;
+  line-height: .92 !important;
+}
+
+.hero-copy-panel p {
+  max-width: 40rem !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+.hero-property-orbit {
+  opacity: .98;
+}
+
+.hero-property-card {
+  position: absolute;
+  width: min(15rem, 21vw);
+  overflow: hidden;
+  border: 1px solid rgba(238, 234, 224, .6);
+  border-radius: 18px;
+  background: rgba(246, 243, 235, .92);
+  box-shadow: 0 24px 70px rgba(41, 47, 27, .22);
+  transform: rotate(-7deg);
+}
+
+.hero-property-card-right {
+  right: clamp(1rem, 6vw, 5rem);
+  top: 26%;
+  transform: rotate(8deg);
+}
+
+.hero-property-card-left {
+  left: clamp(1rem, 6vw, 5rem);
+  top: 28%;
+}
+
+.hero-property-card-media {
+  position: relative;
+  height: 8.5rem;
+  overflow: hidden;
+}
+
+.hero-property-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(41, 47, 27, .2));
+}
+
+.hero-property-card-body {
+  padding: .85rem .95rem 1rem;
+}
+
+.hero-property-card-body strong {
+  display: block;
+  color: var(--olive);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.hero-property-card-body span,
+.hero-property-card-body small {
+  display: block;
+  color: var(--ink);
+  font-size: .76rem;
+  font-weight: 760;
+  line-height: 1.45;
+}
+
+.hero-property-card-body small {
+  color: var(--ink-muted);
+  font-size: .68rem;
+}
+
+.recent-project-section .text-center,
+.offering-feature-section .mb-14,
+.know-us-panel-section .container {
+  position: relative;
+}
+
+.recent-project-section h2,
+.offering-feature-section h2,
+.know-us-copy-panel h2,
+.testimonial-heading h2,
+section h2.text-navy {
+  font-family: var(--font-manrope), sans-serif !important;
+  font-weight: 760 !important;
+  letter-spacing: -.055em !important;
+}
+
+.recent-project-carousel {
+  padding-top: 2.2rem;
+}
+
+.recent-project-carousel .recent-project-card {
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(41, 47, 27, .13);
+}
+
+.recent-project-content h3,
+.offering-service-body h3 {
+  font-weight: 740 !important;
+  letter-spacing: -.04em !important;
+}
+
+.offering-service-card {
+  border-radius: 18px;
+  background: rgba(246, 243, 235, .9);
+}
+
+.offering-service-media {
+  border-radius: 16px;
+  margin: .65rem .65rem 0;
+}
+
+.offering-service-icon {
+  border-radius: 14px;
+}
+
+.know-us-copy-panel {
+  border-radius: 26px;
+}
+
+.know-us-image-tile {
+  border-radius: 18px;
+}
+
+.know-us-stat {
+  border-radius: 16px;
+}
+
+@media (max-width: 1023px) {
+  .hero-property-orbit {
+    display: none;
+  }
+
+  .hero-copy-panel::before {
+    inset: -1.4rem;
   }
 }
 

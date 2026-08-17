@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Menu, MessageCircle, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -57,16 +57,6 @@ export function Navbar() {
             <span key={`${item}-${index}`}>{item}</span>
           ))}
         </div>
-        {/* <a
-          href="https://wa.me/917004549412"
-          target="_blank"
-          rel="noreferrer"
-          className="marquee-whatsapp"
-          aria-label="Chat with Royal Estates on WhatsApp"
-        >
-          <MessageCircle className="h-4 w-4" />
-          WhatsApp
-        </a> */}
       </div>
 
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
