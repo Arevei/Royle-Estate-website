@@ -57,7 +57,7 @@ export function Navbar() {
             <span key={`${item}-${index}`}>{item}</span>
           ))}
         </div>
-        <a
+        {/* <a
           href="https://wa.me/917004549412"
           target="_blank"
           rel="noreferrer"
@@ -66,7 +66,7 @@ export function Navbar() {
         >
           <MessageCircle className="h-4 w-4" />
           WhatsApp
-        </a>
+        </a> */}
       </div>
 
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>

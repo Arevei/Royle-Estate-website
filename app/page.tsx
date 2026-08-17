@@ -1,5 +1,5 @@
 ﻿"use client"
-import { useRef } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,6 +14,7 @@ import { ContactForm } from "./ContactForm";
 
 export default function HomePage() {
   const heroRef = useRef<HTMLElement>(null);
+  const [activeRecentProject, setActiveRecentProject] = useState(0);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end end"],
@@ -37,8 +38,6 @@ export default function HomePage() {
   const heroDetailsY = useTransform(heroScroll, [0.38, 0.78, 1], ["120px", "0px", "-38px"]);
   const heroDetailsScale = useTransform(heroScroll, [0.38, 0.7, 1], [0.93, 1, 0.985]);
   const heroDetailsColor = useTransform(heroScroll, [0.48, 0.78], ["#ffffff", "#173B20"]);
-  const heroStatsOpacity = useTransform(heroScroll, [0.62, 0.84], [0, 1]);
-  const heroStatsY = useTransform(heroScroll, [0.62, 0.9], ["70px", "0px"]);
 
   const testimonials = [
     {
@@ -56,12 +55,6 @@ export default function HomePage() {
       name: "Arjun",
       role: "Buyer, Hyderabad",
     },
-  ];
-
-  const heroStats = [
-    { value: "500,000", label: "Sq. ft area developed" },
-    { value: "1,200+", label: "Clients served" },
-    { value: "15", label: "Years active" },
   ];
 
   const featureCards = [
@@ -90,6 +83,20 @@ export default function HomePage() {
       href: "/services",
     },
   ];
+
+  const recentProjects = [
+    { img: "royal-land-plots.png", title: "Residential Land Plot", desc: "Premium land options planned for secure residential development.", type: "Plot" },
+    { img: "royal-property-selling.png", title: "Land Plot 1200 sq ft", desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.", type: "1200 sq ft" },
+    { img: "green-valley-villas.png", title: "Custom Plot Guidance", desc: "Land guidance tailored to client needs, location goals, and preferences.", type: "Advisory" },
+  ];
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveRecentProject((current) => (current + 1) % recentProjects.length);
+    }, 3600);
+
+    return () => window.clearInterval(timer);
+  }, [recentProjects.length]);
 
   return (
     <div className="w-full font-sans">
@@ -165,17 +172,6 @@ export default function HomePage() {
                   Book A Site Visit
                 </Link>
               </div>
-              <motion.div
-                className="grid w-full max-w-3xl grid-cols-1 gap-3.5 sm:grid-cols-3"
-                style={{ opacity: heroStatsOpacity, y: heroStatsY }}
-              >
-                {heroStats.map((stat) => (
-                  <div key={stat.label} className="hero-stat-card min-h-[104px] rounded-[10px] border p-4 transition-transform duration-300 hover:-translate-y-1">
-                    <div className="text-2xl font-semibold">{stat.value}</div>
-                    <div className="mt-1.5 text-[10px] font-semibold uppercase leading-snug tracking-[0.16em] opacity-70">{stat.label}</div>
-                  </div>
-                ))}
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -303,8 +299,8 @@ export default function HomePage() {
 
       {/* SECTION 4: Main Property Features */}
       <section className="py-24 bg-white">
-        <div className="container flex flex-col md:flex-row mx-auto px-4 md:px-6 gap-y-6">
-          <div className="w-full md:w-[40%] mb-12 ">
+        <div className="container flex flex-col  mx-auto px-4 md:px-6 gap-y-6">
+          <div className="w-full flex flex-col md:flex-row  mb-12 ">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -324,14 +320,15 @@ export default function HomePage() {
                 READ MORE
               </Link>
 
-              <div className="flex gap-5 items-start mb-10">
+              {/* <div className="flex gap-5 items-start mb-10">
                 <Trophy className="w-12 h-12 text-[#763300] shrink-0 stroke-[1.5]" />
                 <div>
                   <h4 className="font-bold text-navy text-xl">Ideal Plot Size</h4>
                   <p className="text-gray-500 text-sm mt-2 leading-relaxed">Affordable plots sized exactly 1200 sq ft, ideal for building your dream home or planning a secure investment.</p>
                 </div>
-              </div>
+              </div> */}
 
+            </motion.div>
               <div className="flex flex-col sm:flex-row items-center gap-8 mt-auto">
                 <a href="tel:+917004549412" className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center">
@@ -342,13 +339,12 @@ export default function HomePage() {
                     <div className="font-bold text-navy text-lg mt-0.5">+91 70045 49412</div>
                   </div>
                 </a>
-                <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
+                {/* <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
                   DISCOVER MORE
-                </Link>
+                </Link> */}
               </div>
-            </motion.div>
           </div>
-          <div className=" w-full md:w-[60%]">
+          <div className=" w-full ">
 
             <div className="lg:grid-cols-2 grid grid-cols-1 ">
               {featureCards.slice(0, 2).map((feature, index) => (
@@ -394,62 +390,46 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 5: Choose Your Dream Home */}
-      <section className="ploy-surface py-24">
-        <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
-          <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">RECENT PROJECT ——</div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-12 text-center">Choose your Dream Home</h2>
-
-          <div className="flex flex-wrap justify-center gap-8 border-b border-gray-200 mb-14 w-full max-w-2xl">
-            {['All[3]', 'PLOT', 'FLAT'].map((tab, i) => (
-              <Link
-                key={tab}
-                href="/projects"
-                className={`pb-4 px-2 text-sm font-bold uppercase tracking-widest border-b-2 transition-colors ${i === 0 ? 'border-[#763300] text-[#763300]' : 'border-transparent text-gray-400 hover:text-navy'
-                  }`}
-              >
-                {tab}
-              </Link>
-            ))}
+      <section className="recent-project-section py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="mb-12 text-center">
+            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">RECENT PROJECT ——</div>
+            <h2 className="mx-auto max-w-3xl text-4xl md:text-5xl font-bold text-navy">Choose your Dream Home</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-            {[
-              { img: "royal-land-plots.png", title: "Residential Land Plot", desc: "Premium land options planned for secure residential development.", type: "PLOT" },
-              { img: "royal-property-selling.png", title: "Land Plot 1200 sq ft", desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.", type: "1200 SQ FT" },
-              { img: "green-valley-villas.png", title: "Custom Plot Guidance", desc: "Land guidance tailored to client needs, location goals, and preferences.", type: "ADVISORY" }
-            ].map((c, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="relative h-[550px] group overflow-hidden bg-navy transition-all duration-300 shadow-lg hover:shadow-2xl"
-              >
-                {/* Background Image */}
-                <Image
-                  src={`/images/projects/${c.img}`}
-                  alt={c.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90"
-                />
-                <div className="project-card-overlay absolute inset-0" />
-
-                <div className="project-card-content absolute inset-x-0 bottom-0 z-10 flex flex-col items-center px-8 pb-8 pt-16 text-center">
-                  <div className="project-card-label mb-5 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em]">
-                    {c.type}
+          <div className="recent-project-carousel">
+            <div
+              className="recent-project-stack"
+              style={{ "--project-slide": activeRecentProject } as CSSProperties}
+            >
+              {recentProjects.concat(recentProjects).map((c, i) => (
+                <motion.article
+                  key={`${c.title}-${i}`}
+                  initial={{ opacity: 0, y: 36 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: (i % recentProjects.length) * 0.08 }}
+                  className="recent-project-card"
+                >
+                  <Image
+                    src={`/images/projects/${c.img}`}
+                    alt={c.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 32vw"
+                    className="object-cover transition-transform duration-1000"
+                  />
+                  <div className="recent-project-overlay" />
+                  <div className="recent-project-content">
+                    <span>{c.type}</span>
+                    <h3>{c.title}</h3>
+                    <p>{c.desc}</p>
+                    <Link href="/projects" aria-label={`View ${c.title}`}>
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
                   </div>
-                  <h3 className="project-card-title mb-3 text-[26px] font-bold leading-tight">{c.title}</h3>
-                  <p className="project-card-description mb-8 max-w-[270px] text-sm leading-relaxed">{c.desc}</p>
-
-                  <Link href="/projects" aria-label={`View ${c.title}`} className="project-card-button flex h-12 w-12 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-105">
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -624,7 +604,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 9: Services Grid */}
-      <section className="py-24 md:py-28">
+      <section className="offering-feature-section py-24 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-14 text-center md:mb-16">
             <div className="mb-5 flex items-center justify-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-[#173B20]">
@@ -638,7 +618,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="offering-service-grid">
             {[
               {
                 title: "Residential Land Plot",
@@ -665,73 +645,63 @@ export default function HomePage() {
                 desc: "Committed to climate-resilient land development and responsible planning practices.",
               }
             ].map((srv, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
+              <motion.article
+                key={srv.title}
+                initial={{ opacity: 0, y: 36 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group flex min-h-[500px] cursor-pointer flex-col overflow-hidden rounded-[10px] border border-[#173B20]/25 bg-[#F7F4EE] shadow-[0_14px_36px_rgba(23,59,32,0.08)] transition-[border-color,box-shadow] duration-300 hover:border-[#173B20] hover:shadow-[0_20px_45px_rgba(23,59,32,0.14)]"
+                transition={{ delay: i * 0.08 }}
+                className="offering-service-card"
               >
-                <div className="relative h-[235px] overflow-hidden">
-                  <Image src={`/images/${srv.img}`} alt={srv.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-[1.06]" />
-                  <div className="absolute inset-0 bg-[#173B20]/5 transition-colors duration-300 group-hover:bg-transparent" />
-                  <span className="absolute right-5 top-5 text-[11px] font-bold tracking-[0.24em] text-white/80">0{i + 1}</span>
-                  <div className="service-icon-tile absolute bottom-5 left-5 flex h-14 w-14 items-center justify-center transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="offering-service-media">
+                  <Image src={`/images/${srv.img}`} alt={srv.title} fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover transition-transform duration-1000" />
+                  <span>0{i + 1}</span>
+                </div>
+                <div className="offering-service-body">
+                  <div className="offering-service-icon">
                     <srv.icon className="h-6 w-6 stroke-[1.7]" />
                   </div>
-                </div>
-
-                <div className="flex flex-1 flex-col px-7 pb-7 pt-7">
-                  <h3 className="mb-4 font-serif text-[25px] font-semibold leading-tight text-[#173404]">{srv.title}</h3>
-                  <p className="mb-8 text-sm leading-7 text-[#4d5547]">
-                    {srv.desc}
-                  </p>
-                  <Link href="/services" className="mt-auto flex w-fit items-center gap-3 border-b border-[#ba7517]/50 pb-1 text-xs font-bold uppercase tracking-[0.18em] text-[#763300] transition-colors hover:border-[#763300]">
-                    Explore service <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <h3>{srv.title}</h3>
+                  <p>{srv.desc}</p>
+                  <Link href="/services">
+                    Explore service <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </div>
       </section>
 
       {/* SECTION 10: Outstanding Way of Luxury Life */}
-      <section className="py-28 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <section className="know-us-panel-section py-24 md:py-28 overflow-hidden">
+        <div className="container mx-auto grid grid-cols-1 gap-5 px-4 md:px-6 lg:grid-cols-[1.2fr_.8fr] lg:items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="know-us-copy-panel"
           >
-            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">GET TO KNOW US ——</div>
-            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-navy mb-10 leading-[1.1]">Quality land options for every family</h2>
+            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-5">GET TO KNOW US ——</div>
+            <h2>Quality land options for every family</h2>
+            <p>
+              Royal Estates helps buyers compare land options, understand site potential, and move from enquiry to site visit with clear, practical support.
+            </p>
+            <Button asChild className="know-us-cta">
+              <Link href="/about">Discover More</Link>
+            </Button>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <div className="bg-white border border-gray-100 shadow-md px-6 py-4 rounded-full flex items-center gap-4 font-bold text-navy text-sm w-fit">
-                <div className="w-6 h-6 rounded-full bg-[#763300]/10 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-[#763300] stroke-[3]" />
+            <div className="know-us-stat-row">
+              {[
+                { value: "1200", label: "Sq ft plot focus" },
+                { value: "500K", label: "Sq ft developed" },
+                { value: "95%", label: "On-time completion" },
+              ].map((item) => (
+                <div key={item.label} className="know-us-stat">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
                 </div>
-                Integrity and quality
-              </div>
-              <div className="bg-white border border-gray-100 shadow-md px-6 py-4 rounded-full flex items-center gap-4 font-bold text-navy text-sm w-fit">
-                <div className="w-6 h-6 rounded-full bg-[#763300]/10 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-[#763300] stroke-[3]" />
-                </div>
-                Personalized client care
-              </div>
-            </div>
-
-            <div className="flex items-center gap-6 pt-10 border-t border-gray-100">
-              <div className="w-[72px] h-[72px] rounded-full bg-[#763300] flex items-center justify-center text-white shrink-0 shadow-xl shadow-[#763300]/30">
-                <Leaf className="w-8 h-8 stroke-[1.5]" />
-              </div>
-              <div>
-                <h4 className="text-[22px] font-bold text-navy">Sustainable Practices</h4>
-                <p className="text-gray-500 mt-2 text-lg">Climate-resilient land development</p>
-              </div>
+              ))}
             </div>
           </motion.div>
 
@@ -739,18 +709,13 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="regional-presence relative flex h-[400px] items-center justify-center overflow-hidden rounded-[10px] border"
+            className="know-us-image-grid"
           >
-            <div className="regional-presence-ring regional-presence-ring-outer" aria-hidden="true" />
-            <div className="regional-presence-ring regional-presence-ring-inner" aria-hidden="true" />
-            <div className="relative z-10 flex flex-col items-center px-6 text-center">
-              <div className="regional-presence-icon mb-5 flex h-14 w-14 items-center justify-center">
-                <MapPin className="h-6 w-6 stroke-[1.8]" />
-              </div>
-              <div className="regional-presence-kicker mb-3 text-[10px] font-bold uppercase tracking-[0.24em]">Key Trust Metrics</div>
-              <div className="regional-presence-number text-[88px] font-semibold leading-none tracking-tight md:text-[118px]">95%</div>
-              <div className="regional-presence-label mt-4 px-6 py-2 text-[11px] font-bold uppercase tracking-[0.2em]">On-Time Completion</div>
-              <div className="regional-presence-locations mt-5 text-xs font-semibold uppercase tracking-[0.16em]">Bhalubasa <span>·</span> Jamshedpur <span>·</span> Jharkhand</div>
+            <div className="know-us-image-tile">
+              <Image src="/images/interior-living.png" alt="Royal Estates living planning visual" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+            </div>
+            <div className="know-us-image-tile">
+              <Image src="/images/projects/royal-land-plots.png" alt="Royal Estates land plot visual" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
             </div>
           </motion.div>
         </div>
