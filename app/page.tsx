@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import {
   Building2, ArrowRight, Check, MapPin, Star,
   Building, Home,
   Store, Phone, Globe, Leaf, Cpu, Quote,
-  User, Bed, Sofa, Smile, Zap, Search
+  User, Bed, Sofa, Smile, Zap
 } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
@@ -208,37 +208,19 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="relative h-[520px] w-full mt-10 md:mt-0"
             >
-              {/* Main living room image */}
-              <div className="absolute bottom-0 right-0 h-[86%] w-[82%] overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/interior-living.png"
-                  alt="Royal Estates living space"
-                  fill
-                  sizes="(max-width: 1024px) 82vw, 42vw"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Overlapping bedroom image */}
-              <div className="absolute left-0 top-0 z-10 h-[52%] w-[52%] overflow-hidden border-[12px] border-white shadow-xl">
-                <Image
-                  src="/images/interior-bedroom.png"
-                  alt="Royal Estates bedroom"
-                  fill
-                  sizes="(max-width: 1024px) 52vw, 26vw"
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Teal building icon card */}
-              <div className="absolute top-12 right-6 bg-[#763300] w-24 h-24 flex items-center justify-center shadow-lg z-20">
-                <Building className="w-12 h-12 text-white stroke-[1.5]" />
-              </div>
-
-              {/* Supported resident statistic */}
-              <div className="absolute bottom-16 left-6 bg-white border border-gray-100 shadow-xl p-6 flex items-center gap-5 z-20">
-                <div className="text-5xl font-bold text-[#763300] leading-none">06</div>
-                <div className="text-sm font-bold leading-snug text-navy uppercase tracking-wider">Service<br />Categories</div>
+              {/* New concept: an architectural planning dossier, not a photo collage */}
+              <div className="quality-visual-shell absolute inset-0 overflow-hidden">
+                <div className="quality-visual-grid absolute inset-0" />
+                <div className="quality-visual-word absolute -left-5 top-3 font-serif text-[clamp(5rem,13vw,10rem)] font-bold leading-none tracking-[-0.08em]">QUALITY</div>
+                <div className="quality-visual-plot-card absolute bottom-8 right-2 h-[62%] w-[76%] overflow-hidden shadow-2xl">
+                  <Image src="/images/projects/royal-land-plots.png" alt="Planned land plots at Royal Estates" fill sizes="(max-width: 1024px) 76vw, 38vw" className="object-cover" />
+                  <div className="quality-visual-map-lines absolute inset-0" />
+                  <motion.button whileHover={{ scale: 1.15 }} className="quality-visual-marker absolute left-[48%] top-[43%] flex h-11 w-11 items-center justify-center rounded-full border-4 border-[var(--ivory)] bg-[var(--brass)] text-[var(--forest)] shadow-xl" aria-label="Featured plot location"><MapPin className="h-5 w-5" /></motion.button>
+                  <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-[linear-gradient(transparent,rgba(7,59,42,.94))] p-5 pt-16 text-[var(--ivory)]"><div><span className="block text-[9px] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">Master plan 01</span><span className="font-serif text-2xl">A considered beginning</span></div><ArrowRight className="h-5 w-5 text-[var(--brass)]" /></div>
+                </div>
+                <motion.div animate={{ y: [0, -7, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="quality-visual-coordinate absolute left-5 top-28 z-10 p-4 shadow-xl"><span className="mb-2 flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.22em]"><MapPin className="h-3 w-3" /> Plot verified</span><span className="font-mono text-xs">22°48&apos;N / 86°12&apos;E</span><span className="mt-2 block text-[10px] text-[var(--ink-muted)]">Jamshedpur, Jharkhand</span></motion.div>
+                <motion.div whileHover={{ rotate: 12, scale: 1.05 }} className="quality-visual-stamp absolute right-3 top-16 z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full text-center"><Building className="mb-1 h-6 w-6" /><span className="text-[8px] font-bold uppercase tracking-[0.15em]">Clear title<br />clear future</span></motion.div>
+                <div className="quality-visual-caption absolute bottom-3 left-2 font-mono text-[9px] uppercase tracking-[0.3em]">RE / LAND DEVELOPMENT / 2024</div>
               </div>
             </motion.div>
 
