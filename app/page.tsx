@@ -208,57 +208,20 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="relative h-[520px] w-full mt-10 md:mt-0"
             >
-              {/* Signature property collage */}
-              <div className="quality-collage-main absolute bottom-0 right-0 h-[86%] w-[82%] overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/interior-living.png"
-                  alt="Royal Estates living space"
-                  fill
-                  sizes="(max-width: 1024px) 82vw, 42vw"
-                  className="object-cover"
-                />
-                <div className="quality-collage-wash absolute inset-0" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
-                  <div>
-                    <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.28em] text-[#C89B3C]">Royal standard</span>
-                    <span className="font-serif text-3xl leading-none">Built around trust</span>
-                  </div>
-                  <ArrowRight className="mb-1 h-5 w-5 text-[#C89B3C]" />
+              {/* New concept: an architectural planning dossier, not a photo collage */}
+              <div className="quality-visual-shell absolute inset-0 overflow-hidden">
+                <div className="quality-visual-grid absolute inset-0" />
+                <div className="quality-visual-word absolute -left-5 top-3 font-serif text-[clamp(5rem,13vw,10rem)] font-bold leading-none tracking-[-0.08em]">QUALITY</div>
+                <div className="quality-visual-plot-card absolute bottom-8 right-2 h-[62%] w-[76%] overflow-hidden shadow-2xl">
+                  <Image src="/images/projects/royal-land-plots.png" alt="Planned land plots at Royal Estates" fill sizes="(max-width: 1024px) 76vw, 38vw" className="object-cover" />
+                  <div className="quality-visual-map-lines absolute inset-0" />
+                  <motion.button whileHover={{ scale: 1.15 }} className="quality-visual-marker absolute left-[48%] top-[43%] flex h-11 w-11 items-center justify-center rounded-full border-4 border-[var(--ivory)] bg-[var(--brass)] text-[var(--forest)] shadow-xl" aria-label="Featured plot location"><MapPin className="h-5 w-5" /></motion.button>
+                  <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-[linear-gradient(transparent,rgba(7,59,42,.94))] p-5 pt-16 text-[var(--ivory)]"><div><span className="block text-[9px] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">Master plan 01</span><span className="font-serif text-2xl">A considered beginning</span></div><ArrowRight className="h-5 w-5 text-[var(--brass)]" /></div>
                 </div>
+                <motion.div animate={{ y: [0, -7, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="quality-visual-coordinate absolute left-5 top-28 z-10 p-4 shadow-xl"><span className="mb-2 flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.22em]"><MapPin className="h-3 w-3" /> Plot verified</span><span className="font-mono text-xs">22°48&apos;N / 86°12&apos;E</span><span className="mt-2 block text-[10px] text-[var(--ink-muted)]">Jamshedpur, Jharkhand</span></motion.div>
+                <motion.div whileHover={{ rotate: 12, scale: 1.05 }} className="quality-visual-stamp absolute right-3 top-16 z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full text-center"><Building className="mb-1 h-6 w-6" /><span className="text-[8px] font-bold uppercase tracking-[0.15em]">Clear title<br />clear future</span></motion.div>
+                <div className="quality-visual-caption absolute bottom-3 left-2 font-mono text-[9px] uppercase tracking-[0.3em]">RE / LAND DEVELOPMENT / 2024</div>
               </div>
-
-              {/* Overlapping bedroom image */}
-              <motion.div
-                whileHover={{ rotate: -1, y: -6 }}
-                transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                className="quality-collage-secondary absolute left-0 top-0 z-10 h-[52%] w-[52%] overflow-hidden border-[10px] border-[var(--ivory)] shadow-xl"
-              >
-                <Image
-                  src="/images/interior-bedroom.png"
-                  alt="Royal Estates bedroom"
-                  fill
-                  sizes="(max-width: 1024px) 52vw, 26vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 border border-white/20" />
-              </motion.div>
-
-              {/* Trust seal */}
-              <motion.div
-                whileHover={{ rotate: 8, scale: 1.06 }}
-                className="quality-trust-seal absolute top-12 right-6 z-20 flex h-24 w-24 flex-col items-center justify-center rounded-full shadow-lg"
-              >
-                <Building className="mb-1 h-8 w-8 stroke-[1.5]" />
-                <span className="text-[9px] font-bold uppercase tracking-[0.16em]">Verified</span>
-              </motion.div>
-
-              {/* Service statistic */}
-              <motion.div whileHover={{ y: -5 }} className="quality-stat absolute bottom-16 left-6 z-20 flex items-center gap-5 p-5 shadow-xl">
-                <div className="text-5xl font-bold leading-none">06</div>
-                <div className="text-xs font-bold leading-snug uppercase tracking-[0.16em]">Service<br />Categories</div>
-              </motion.div>
-
-              <div className="quality-vertical-label absolute -right-7 top-1/2 hidden -translate-y-1/2 rotate-90 text-[10px] font-bold uppercase tracking-[0.35em] lg:block">Plan • Own • Prosper</div>
             </motion.div>
 
             {/* Right: Text Content */}
