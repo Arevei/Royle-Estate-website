@@ -284,7 +284,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="theme-dark-section py-20 md:py-24">
+      {/* <section className="theme-dark-section py-20 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="theme-dark-kicker mb-3 text-xs font-bold uppercase tracking-[0.2em]">
@@ -301,7 +301,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
      
 
