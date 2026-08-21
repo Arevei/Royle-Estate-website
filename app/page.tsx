@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { ProjectLayoutSection } from "@/components/ProjectLayoutSection";
 import {
   Building2, ArrowRight, Check, MapPin, Star,
   Building, Home,
@@ -197,6 +198,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ProjectLayoutSection />
+
       {/* SECTION 3: Split Overlapping Images */}
       <section className="ploy-surface py-24">
         <div className="container mx-auto px-4 md:px-6">
@@ -312,13 +315,13 @@ export default function HomePage() {
 
             </motion.div>
               <div className="flex flex-col sm:flex-row items-center gap-8 mt-auto">
-                <a href="tel:+917004549412" className="flex items-center gap-4">
+                <a href="tel:+918340395597" className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center">
                     <Phone className="w-6 h-6 text-[#763300]" fill="currentColor" />
                   </div>
                   <div>
                     <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Call Experts</div>
-                    <div className="font-bold text-navy text-lg mt-0.5">+91 70045 49412</div>
+                    <div className="font-bold text-navy text-lg mt-0.5">+91 83403 95597</div>
                   </div>
                 </a>
                 {/* <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
@@ -604,7 +607,7 @@ export default function HomePage() {
         {[
           { num: "500,000", label: "Area Developed (Sq. Ft.)", bg: "stats-bg-1.png", icon: Building2 },
           { num: "1,200+", label: "Clients Served", bg: "stats-bg-3.png", icon: Smile },
-          { num: "15", label: "Years Active", bg: "stats-bg-2.png", icon: Home },
+          { num: "2018", label: "Established", bg: "stats-bg-2.png", icon: Home },
           { num: "95%", label: "On-Time Completion", bg: "stats-bg-4.png", icon: Zap },
         ].map((stat, i) => (
           <div key={i} className="stats-card group relative flex h-72 flex-col items-center justify-center overflow-hidden p-8 text-center md:h-[380px]">

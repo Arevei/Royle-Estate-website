@@ -1,14 +1,15 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Home, Landmark, MapPin, Trees } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { ProjectLayoutSection } from "@/components/ProjectLayoutSection";
 
 const stats = [
   { num: "500,000", label: "Sq ft area developed" },
   { num: "1,200+", label: "Clients served" },
-  { num: "15", label: "Years active" },
+  { num: "2018", label: "Established" },
 ];
 
 const highlights = [
@@ -26,52 +27,61 @@ const highlights = [
   "Transparent Next Steps",
 ];
 
-const services = [
-  { icon: Trees, title: "Land Development" },
-  { icon: Landmark, title: "Plot Planning" },
-  { icon: Home, title: "Residential Land Options" },
-  { icon: MapPin, title: "Site Visits & Support" },
-];
-
 const team = [
   {
-    name: "Aarav",
-    role: "Founder & CEO",
-    desc: "Guides buyer conversations, growth decisions, and long-term land development strategy.",
-    focus: "Client Strategy",
-    stat: "15 yrs",
+    name: "Navnit Kumar",
+    role: "Regional Manager",
+    desc: "Leads regional coordination, customer relationships, and field-level execution for Royal Estates.",
+    focus: "Regional Operations",
+    stat: "RM",
     tone: "team-tone-emerald",
   },
   {
-    name: "Ananya",
-    role: "Development Head",
-    desc: "Oversees site planning, quality checks, and project coordination from survey to delivery.",
-    focus: "Project Quality",
-    stat: "42 sites",
+    name: "Reet Kaur",
+    role: "General Manager",
+    desc: "Oversees business operations, customer experience, and transparent service standards.",
+    focus: "Management",
+    stat: "GM",
     tone: "team-tone-brass",
   },
   {
-    name: "Vihaan",
-    role: "Operations Manager",
-    desc: "Keeps visits, documentation steps, and client updates moving with clear accountability.",
-    focus: "Operations",
-    stat: "1,200+",
+    name: "Rajwindar Singh",
+    role: "Marketing Manager",
+    desc: "Manages buyer outreach, project communication, and marketing conversations with clarity.",
+    focus: "Marketing",
+    stat: "MM",
     tone: "team-tone-sunset",
   },
   {
-    name: "Isha",
-    role: "Land Planning Expert",
-    desc: "Shapes plot layouts around access, future use, sunlight, open space, and practical budgets.",
-    focus: "Plot Planning",
-    stat: "Layouts",
+    name: "Baljeet Singh",
+    role: "Marketing Manager",
+    desc: "Supports customer enquiries, site visit interest, and market engagement for active projects.",
+    focus: "Market Growth",
+    stat: "MM",
     tone: "team-tone-olive",
+  },
+  {
+    name: "Kali Prasad Karnam",
+    role: "Project Manager",
+    desc: "Coordinates project progress, site requirements, planning follow-ups, and execution details.",
+    focus: "Project Delivery",
+    stat: "PM",
+    tone: "team-tone-emerald",
+  },
+  {
+    name: "Shaheen",
+    role: "Accounts Head",
+    desc: "Handles accounts coordination, financial records, and disciplined business support.",
+    focus: "Accounts",
+    stat: "AH",
+    tone: "team-tone-brass",
   },
 ];
 
 export default function About() {
   return (
     <div className="w-full overflow-x-hidden bg-white font-sans">
-      <section className="inner-hero relative flex min-h-[420px] items-center justify-center pt-24 text-center">
+      <section className="inner-hero relative flex min-h-[420px] items-center justify-center py-24 text-center">
         <Image
           src="/images/hero-bg.png"
           alt="Royal Estates homes"
@@ -96,7 +106,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="pt-20 md:pt-24">
+      <section className="py-20 md:py-24">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -128,14 +138,22 @@ export default function About() {
               <span className="h-px w-8" /> Who Are We?
             </p>
             <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              Premium planned land for secure investment.
+              Building trust, creating value, shaping the future.
             </h2>
             <p className="mb-5 text-base leading-relaxed text-zinc-600">
-              <strong className="text-zinc-800">Royal Estates specializes in land development</strong>, offering practical plot options tailored to meet your real estate needs in India.
+              <strong className="text-zinc-800">Royal Estates is a professionally managed real estate company</strong> committed to providing reliable, transparent, and value-driven property solutions.
             </p>
             <p className="mb-8 text-base leading-relaxed text-zinc-600">
-              Our approach is rooted in integrity, quality, and clear ownership support. From plot selection to site visits and documentation coordination, we keep the process simple to follow.
+              Established in 2018 with the vision of creating a trusted name in the real estate sector, Royal Estates helps customers discover the right opportunities in residential, commercial, and land properties while creating long-term value for buyers and investors.
             </p>
+            <div className="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {["Trust", "Transparency", "Quality", "Customer Satisfaction", "Integrity", "Professionalism", "Growth"].map((value) => (
+                <div key={value} className="flex items-center gap-2 border border-[#d8d0bf] bg-[#fffdf8] px-3 py-2 text-xs font-bold uppercase tracking-[0.08em] text-[#173B20]">
+                  <Check className="h-4 w-4 shrink-0 text-[#c89b3c]" />
+                  {value}
+                </div>
+              ))}
+            </div>
             <Link
               href="/contact"
               className="theme-primary-cta inline-flex h-[52px] items-center gap-2 px-8 text-xs font-bold uppercase tracking-widest"
@@ -146,7 +164,7 @@ export default function About() {
         </div>
       </section>
 
-      
+      <ProjectLayoutSection />
 
       <section className="bg-gray-50 pb-20 md:pb-24">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
@@ -159,12 +177,13 @@ export default function About() {
               <span className="h-px w-8" /> Our Vision
             </p>
             <h2 className="mb-6 text-3xl font-bold leading-tight text-zinc-800 md:text-5xl">
-              To be India&apos;s premier land developer delivering quality plots.
+              A growing real estate business focused on trust and sustainable growth.
             </h2>
             <p className="text-base leading-relaxed text-zinc-600">
-              Our mission is delivering quality land opportunities for every family. We combine clear
-              communication, sustainable practices, and personalized service so clients can secure
-              land with confidence.
+              Today, Royal Estates represents a professionally driven real estate business with a clear
+              focus on trust, transparency, sustainable growth, and customer satisfaction. Our work is
+              guided by integrity, professional excellence, and practical property solutions for buyers,
+              investors, and future homeowners.
             </p>
           </motion.div>
           <motion.div
@@ -212,7 +231,7 @@ export default function About() {
                 People who make every plot decision clearer.
               </h2>
               <p className="mt-5 max-w-lg text-base leading-relaxed text-zinc-600">
-                A focused local team supports planning, site visits, paperwork coordination, and practical advice for every Royal Estates enquiry.
+                A focused professional team supports project coordination, marketing, accounts, site visits, and practical advice for every Royal Estates enquiry.
               </p>
             </div>
             

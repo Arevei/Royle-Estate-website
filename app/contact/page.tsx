@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ContactForm } from "../ContactForm";
 
 const phoneNumbers = [
-  { label: "+91 70045 49412", href: "tel:+917004549412" },
+  { label: "+91 83403 95597", href: "tel:+918340395597" },
 ];
 
 export default function Contact() {
@@ -77,8 +77,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Write email</div>
-                    <a href="mailto:pgoswamijmp@gmail.com" className="text-base font-bold text-zinc-800 transition-colors hover:text-[#763300]">
-                      pgoswamijmp@gmail.com
+                    <a href="mailto:gillreetkaur07@gmail.com" className="text-base font-bold text-zinc-800 transition-colors hover:text-[#763300]">
+                      gillreetkaur07@gmail.com
                     </a>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   <div>
                     <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">Visit office</div>
                     <p className="text-base font-bold leading-relaxed text-zinc-800">
-                      410, 4th Floor, Sai Jumbu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India
+                      410, 4th Floor, Sai Jambu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India
                     </p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function Contact() {
           scrolling="no"
           marginHeight={0}
           marginWidth={0}
-          src="https://maps.google.com/maps?width=520&height=400&hl=en&q=Sai%20Jumbu%20Tower%20Bhalubasa%20East%20Singhbhum%20831009%20Jharkhand&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+          src="https://maps.google.com/maps?width=520&height=400&hl=en&q=Sai%20Jambu%20Tower%20Bhalubasa%20East%20Singhbhum%20831009%20Jharkhand&t=&z=14&ie=UTF8&iwloc=B&output=embed"
           style={{ display: "block", border: 0 }}
           allowFullScreen
         />

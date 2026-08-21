@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-container relative z-10">
-        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Brand */}
           <div className="space-y-6">
             <Link href="/" className="footer-brand-link">
@@ -14,7 +14,7 @@ export function Footer() {
               <span className="footer-brand-wordmark">Royal Estates</span>
             </Link>
             <p className="footer-copy text-sm leading-relaxed">
-              Royal Estates specializes in land development, offering premium 30x40 plots covering 1200 square feet with clear guidance, trusted ownership support, and responsive service.
+              Royal Estates is a professionally managed real estate company providing reliable, transparent, and value-driven residential, commercial, and land property solutions.
             </p>
           </div>
 
@@ -32,22 +32,35 @@ export function Footer() {
             <ul className="footer-contact space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#ba7517] shrink-0 mt-1" />
-                <span>410, 4th Floor, Sai Jumbu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India</span>
+                <span>410, 4th Floor, Sai Jambu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India</span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={18} className="text-[#ba7517] shrink-0" />
                 <span className="flex flex-col gap-1">
-                  <a href="tel:+917004549412">+91 70045 49412</a>
+                  <a href="tel:+918340395597">+91 83403 95597</a>
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={18} className="text-[#ba7517] shrink-0" />
-                <a href="mailto:pgoswamijmp@gmail.com">pgoswamijmp@gmail.com</a>
+                <a href="mailto:gillreetkaur07@gmail.com">gillreetkaur07@gmail.com</a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4 removed per request */}
+          <div>
+            <h2 className="footer-title">ISO Certified</h2>
+            <div className="overflow-hidden rounded-[8px] border border-white/10 bg-white/5 p-2">
+              <div className="relative aspect-[3/4]">
+                <Image
+                  src="/images/royal-estates-iso-certificate.jpeg"
+                  alt="Royal Estates ISO 9001:2015 certificate"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
 
           {/* Bottom Bar */}
         </div>

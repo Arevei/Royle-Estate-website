@@ -40,7 +40,7 @@ export function Navbar() {
             "Planned residential communities",
             "500,000 sq ft area developed",
             "1,200+ clients served",
-            "15 years active",
+            "Established in 2018",
             "95% on-time completion",
             "Site visit coordination",
             "Trusted ownership support",
@@ -49,7 +49,7 @@ export function Navbar() {
             "Planned residential communities",
             "500,000 sq ft area developed",
             "1,200+ clients served",
-            "15 years active",
+            "Established in 2018",
             "95% on-time completion",
             "Site visit coordination",
             "Trusted ownership support",
@@ -124,7 +124,7 @@ export function Navbar() {
           ))}
           </nav>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="button-primary w-full">Book a site visit <ArrowUpRight className="h-4 w-4" /></Link>
-          <a href="tel:+917004549412" className="mt-4 text-center text-sm font-semibold text-[#173B20]">+91 70045 49412</a>
+          <a href="tel:+918340395597" className="mt-4 text-center text-sm font-semibold text-[#173B20]">+91 83403 95597</a>
         </div>
       )}
     </>

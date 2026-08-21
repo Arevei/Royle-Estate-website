@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What are the key trust metrics?",
-    a: "Royal Estates highlights 500,000 sq ft area developed, 1,200+ clients served, 15 years active, and 95% on-time completion.",
+    a: "Royal Estates highlights 500,000 sq ft area developed, 1,200+ clients served, a journey established in 2018, and 95% on-time completion.",
   },
   {
     q: "What makes the plot size ideal?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "How can I contact Royal Estates for inquiries?",
-    a: "Call +91 70045 49412, email pgoswamijmp@gmail.com, use the website contact form, or visit 410, 4th Floor, Sai Jumbu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India.",
+    a: "Call +91 83403 95597, email gillreetkaur07@gmail.com, use the website contact form, or visit 410, 4th Floor, Sai Jambu Tower, Bhalubasa, East Singhbhum - 831009, Jharkhand, India.",
   },
   {
     q: "Does Royal Estates provide legal or financial advice?",
@@ -118,8 +118,8 @@ export default function FAQ() {
             <p className="theme-dark-copy text-sm">Our team is ready to help you find the perfect property.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+917004549412" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
-              Call +91 70045 49412
+            <a href="tel:+918340395597" className="theme-brass-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
+              Call +91 83403 95597
             </a>
             <Link href="/contact" className="theme-outline-light-cta flex h-[52px] items-center px-8 text-xs font-bold uppercase tracking-wider">
               Contact Us
