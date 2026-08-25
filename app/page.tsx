@@ -490,7 +490,7 @@ export default function HomePage() {
               >
                 <Image src={item.img} alt={item.title} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover transition-transform duration-700 group-hover:scale-105 ${item.pos}`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                <h3 className="absolute bottom-6 left-6 right-6 text-lg font-bold text-white drop-shadow-sm">{item.title}</h3>
+                {/* <h3 className="absolute bottom-6 left-6 right-6 text-lg font-bold text-white drop-shadow-sm">{item.title}</h3> */}
               </motion.div>
             ))}
           </div>
