@@ -466,7 +466,7 @@ export default function HomePage() {
             <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">Gallery</div>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-6">Royal Estates Lifestyle</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Demo visuals from our local assets show the kind of green, comfortable, and secure spaces we build.
+              visuals from our local assets show the kind of green, comfortable, and secure spaces we build.
             </p>
           </div>
           <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
