@@ -123,7 +123,7 @@ export default function HomePage() {
             <div className="hero-luxury-grid" />
           </div>
 
-         
+
 
           <motion.div
             className="hero-intro-screen pointer-events-none absolute inset-x-0 top-0 z-10 flex h-screen select-none flex-col items-center justify-center px-4 text-center"
@@ -218,7 +218,7 @@ export default function HomePage() {
                 <div className="quality-visual-plot-card absolute bottom-8 right-2 h-[62%] w-[76%] overflow-hidden shadow-2xl">
                   <Image src="/images/green-valley-development.jpg" alt="Planned 30x40 land plots at Royal Estates" fill sizes="(max-width: 1024px) 76vw, 38vw" className="object-cover" />
                   <div className="quality-visual-map-lines absolute inset-0" />
-          
+
                   <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-[linear-gradient(transparent,rgba(7,59,42,.94))] p-5 pt-16 text-[var(--ivory)]"><div><span className="block text-[9px] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">Master plan 01</span><span className="font-serif text-2xl">A considered beginning</span></div><ArrowRight className="h-5 w-5 text-[var(--brass)]" /></div>
                 </div>
                 <motion.div animate={{ y: [0, -7, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="quality-visual-coordinate absolute left-5 top-28 z-10 p-4 shadow-xl"><span className="mb-2 flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.22em]"><MapPin className="h-3 w-3" /> Plot verified</span><span className="font-mono text-xs">22°48&apos;N / 86°12&apos;E</span><span className="mt-2 block text-[10px] text-[var(--ink-muted)]">Jamshedpur, Jharkhand</span></motion.div>
@@ -314,20 +314,20 @@ export default function HomePage() {
               </div> */}
 
             </motion.div>
-              <div className="flex flex-col sm:flex-row items-center gap-8 mt-auto">
-                <a href="tel:+918340395597" className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-[#763300]" fill="currentColor" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Call Experts</div>
-                    <div className="font-bold text-navy text-lg mt-0.5">+91 83403 95597</div>
-                  </div>
-                </a>
-                {/* <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-8 mt-auto">
+              <a href="tel:+918340395597" className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full border border-gray-200 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-[#763300]" fill="currentColor" />
+                </div>
+                <div>
+                  <div className="text-xs text-gray-400 font-bold uppercase tracking-wider">Call Experts</div>
+                  <div className="font-bold text-navy text-lg mt-0.5">+91 83403 95597</div>
+                </div>
+              </a>
+              {/* <Link href="/about" className="flex h-14 w-full items-center text-[#F1EFE8] bg-[#763300] hover:bg-[#F1EFE8] hover:text-[#763300] justify-center border px-8 text-xs font-black uppercase tracking-widest  transition-all hover:-translate-y-1 hover:bg-[#763300] sm:w-auto">
                   DISCOVER MORE
                 </Link> */}
-              </div>
+            </div>
           </div>
           <div className=" w-full ">
 
@@ -460,38 +460,42 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 6B: Project Glimpses */}
-      {/* <section className="py-24 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">Gallary</div>
+            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">Gallery</div>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-navy mb-6">Royal Estates Lifestyle</h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Demo visuals from our local assets show the kind of green, comfortable, and secure spaces we build.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
             {[
-              { img: "/images/projects/land-plot-1200-sq-ft.webp", title: "1200 sq feet land plot landscape" },
-              { img: "/images/projects/residential-community.webp", title: "Aerial view of planned land parcels" },
-              { img: "/images/projects/land-survey-progress.webp", title: "Land survey and marking in progress" },
+              { img: "/images/projects/project-signboard.png", title: "Royal Estates project signboard", aspect: "aspect-[4/3]", pos: "object-center" },
+              { img: "/images/projects/plot-21-field.png", title: "Plot 21 field landscape", aspect: "aspect-[3/2]", pos: "object-center" },
+              { img: "/images/projects/client-certificate-handover-01.png", title: "Royal Estates client handover 01", aspect: "aspect-[3/4]", pos: "object-top" },
+              // { img: "/images/projects/client-certificate-handover-02.png", title: "Royal Estates client handover 02", aspect: "aspect-[3/2]", pos: "object-center" },
+              // { img: "/images/projects/client-certificate-handover-03.png", title: "Royal Estates client handover 03", aspect: "aspect-[4/3]", pos: "object-top" },
+              { img: "/images/projects/client-certificate-handover-05.png", title: "Royal Estates client handover 05", aspect: "aspect-[3/2]", pos: "object-top" },
+              { img: "/images/projects/client-certificate-handover-06.png", title: "Royal Estates client handover 06", aspect: "aspect-[4/3]", pos: "object-top" },
+              { img: "/images/projects/client-certificate-handover-04.png", title: "Royal Estates client handover 04", aspect: "aspect-[4/3]", pos: "object-top" },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative h-[360px] overflow-hidden bg-gray-100 shadow-lg group"
+                transition={{ delay: i * 0.05 }}
+                className={`group relative mb-5 overflow-hidden bg-gray-100 shadow-lg break-inside-avoid rounded-lg ${item.aspect}`}
               >
-                <Image src={item.img} alt={item.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#173404]/80 to-transparent" />
-                <h3 className="absolute bottom-8 left-8 right-8 text-xl font-bold text-white">{item.title}</h3>
+                <Image src={item.img} alt={item.title} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover transition-transform duration-700 group-hover:scale-105 ${item.pos}`} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                <h3 className="absolute bottom-6 left-6 right-6 text-lg font-bold text-white drop-shadow-sm">{item.title}</h3>
               </motion.div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* SECTION 7: Reference-inspired middle search hero */}
       <section className="middle-dream-section py-24 md:py-28">
@@ -532,7 +536,7 @@ export default function HomePage() {
                 Discover well-planned Royal Estates plots with practical guidance, local support, and a simpler path from enquiry to site visit.
               </p>
 
-              
+
             </div>
           </div>
         </div>

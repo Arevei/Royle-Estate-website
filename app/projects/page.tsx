@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
@@ -7,6 +7,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 const projects = [
+  {
+    title: "SWARNY CITY | RESIDENTIAL PLOT 30 BY 40",
+    group: "30x40",
+    loc: "RAKHAMINES DURKU",
+    img: "project-signboard.png",
+    desc: "Discover a thoughtfully planned real estates project offering prime location, excellent connectivity, modern infrastructure, and strong investment potential. Design for comfortable living and long term value the project provide an ideal opportunity for families , investors, and future homeowners",
+
+  },
   {
     title: "Land Plot 30x40",
     group: "30x40",
@@ -20,34 +28,6 @@ const projects = [
     loc: "Jamshedpur",
     img: "land-plot-1200-sq-ft.webp",
     desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.",
-  },
-  {
-    title: "Custom Plot Sizes",
-    group: "Advisory",
-    loc: "Jamshedpur",
-    img: "developed-plotted-layout.webp",
-    desc: "Specialized 30x40 land plot guidance tailored to client needs and preferences.",
-  },
-  {
-    title: "Trusted Ownership",
-    group: "Ownership",
-    loc: "Jamshedpur",
-    img: "open-land-plot.webp",
-    desc: "Reliable service focused on clear, legal ownership support for every plot offered.",
-  },
-  {
-    title: "Secure Investment",
-    group: "Advisory",
-    loc: "Jamshedpur",
-    img: "residential-community.webp",
-    desc: "Land development guidance for clients planning secure long-term real estate investments.",
-  },
-  {
-    title: "Sustainable Practices",
-    group: "Advisory",
-    loc: "Jamshedpur",
-    img: "land-survey-progress.webp",
-    desc: "Climate-resilient land development and responsible planning practices.",
   },
 ];
 
@@ -75,7 +55,7 @@ export default function Projects() {
       <section className="ploy-surface py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 flex flex-wrap justify-center gap-3">
-            {["All", "30x40", "1200 Sq Ft", "Ownership", "Advisory"].map((tab) => (
+            {["All", "30x40", "1200 Sq Ft"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -97,9 +77,9 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.94 }}
                   transition={{ duration: 0.35, delay: i * 0.02 }}
                   whileHover={{ y: -8 }}
-                  className="ploy-card group overflow-hidden"
+                  className="ploy-card group overflow-hidden flex flex-col h-full"
                 >
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden shrink-0">
                     <Image
                       src={`/images/projects/${prop.img}`}
                       alt={prop.title}
@@ -112,21 +92,37 @@ export default function Projects() {
                       {prop.group}
                     </div>
                   </div>
-                  <div className="p-7">
-                    <h3 className="mb-3 text-2xl font-bold text-zinc-800 transition-colors group-hover:text-[#ba7517]">
-                      {prop.title}
-                    </h3>
-                    <p className="mb-6 line-clamp-2 text-sm leading-relaxed text-zinc-500">{prop.desc}</p>
-                    <div className="mb-6 flex items-center gap-2 border-t border-zinc-100  text-sm font-semibold text-zinc-500">
-                      <MapPin className="h-4 w-4 shrink-0 text-[#763300]" />
-                      {prop.loc}
+                  <div className="p-7 flex flex-col flex-grow justify-between">
+                    <div>
+                      <h3 className="mb-3 text-2xl font-bold text-zinc-800 transition-colors group-hover:text-[#ba7517]">
+                        {prop.title}
+                      </h3>
+                      <p className="mb-6 line-clamp-3 text-sm leading-relaxed text-zinc-500">{prop.desc}</p>
+
+                      {/* {prop.details && (
+                        <div className="mb-6 grid grid-cols-2 gap-2 text-xs border-t border-b border-zinc-100 py-4">
+                          {prop.details.map((d) => (
+                            <div key={d.label} className="bg-[#fcfbf9] border border-[#f5ebd6] px-3 py-2 rounded">
+                              <span className="text-[10px] font-bold text-zinc-400 block tracking-wider uppercase">{d.label}</span>
+                              <span className="font-bold text-zinc-700">{d.value}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )} */}
                     </div>
-                    <Link
-                      href="/contact"
-                      className="theme-primary-cta flex h-12 w-full items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
-                    >
-                      Inquire Now <ArrowRight className="h-4 w-4" />
-                    </Link>
+
+                    <div>
+                      <div className="mb-6 flex items-center gap-2 border-t border-zinc-100 pt-4 text-sm font-semibold text-zinc-500">
+                        <MapPin className="h-4 w-4 shrink-0 text-[#763300]" />
+                        {prop.loc}
+                      </div>
+                      <Link
+                        href="/contact"
+                        className="theme-primary-cta flex h-12 w-full items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider"
+                      >
+                        Inquire Now <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
                   </div>
                 </motion.article>
               ))}
@@ -137,4 +133,3 @@ export default function Projects() {
     </div>
   );
 }
-
