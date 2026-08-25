@@ -86,9 +86,9 @@ export default function HomePage() {
   ];
 
   const recentProjects = [
-    { img: "royal-land-plots.png", title: "Residential Land Plot", desc: "Premium land options planned for secure residential development.", type: "Plot" },
-    { img: "royal-property-selling.png", title: "Land Plot 1200 sq ft", desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.", type: "1200 sq ft" },
-    { img: "green-valley-villas.png", title: "Custom Plot Guidance", desc: "Land guidance tailored to client needs, location goals, and preferences.", type: "Advisory" },
+    { img: "land-plot-30x40.webp", title: "Residential Land Plot", desc: "Premium land options planned for secure residential development.", type: "Plot" },
+    { img: "land-plot-1200-sq-ft.webp", title: "Land Plot 1200 sq ft", desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.", type: "1200 sq ft" },
+    { img: "developed-plotted-layout.webp", title: "Custom Plot Guidance", desc: "Land guidance tailored to client needs, location goals, and preferences.", type: "Advisory" },
   ];
 
   useEffect(() => {
@@ -107,7 +107,7 @@ export default function HomePage() {
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div className="absolute inset-0 z-[-2]" style={{ scale: heroBgScale, y: heroBgY, filter: heroBlur }}>
             <Image
-              src="/images/hero-bg.png"
+              src="/images/projects/project-signboard.png"
               alt="Royal Estates premium property skyline"
               fill
               priority
@@ -216,9 +216,9 @@ export default function HomePage() {
                 <div className="quality-visual-grid absolute inset-0" />
                 <div className="quality-visual-word absolute -left-5 top-3 font-serif text-[clamp(5rem,13vw,10rem)] font-bold leading-none tracking-[-0.08em]">QUALITY</div>
                 <div className="quality-visual-plot-card absolute bottom-8 right-2 h-[62%] w-[76%] overflow-hidden shadow-2xl">
-                  <Image src="/images/projects/royal-land-plots.png" alt="Planned land plots at Royal Estates" fill sizes="(max-width: 1024px) 76vw, 38vw" className="object-cover" />
+                  <Image src="/images/green-valley-development.jpg" alt="Planned 30x40 land plots at Royal Estates" fill sizes="(max-width: 1024px) 76vw, 38vw" className="object-cover" />
                   <div className="quality-visual-map-lines absolute inset-0" />
-                  <motion.button whileHover={{ scale: 1.15 }} className="quality-visual-marker absolute left-[48%] top-[43%] flex h-11 w-11 items-center justify-center rounded-full border-4 border-[var(--ivory)] bg-[var(--brass)] text-[var(--forest)] shadow-xl" aria-label="Featured plot location"><MapPin className="h-5 w-5" /></motion.button>
+          
                   <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between bg-[linear-gradient(transparent,rgba(7,59,42,.94))] p-5 pt-16 text-[var(--ivory)]"><div><span className="block text-[9px] font-bold uppercase tracking-[0.28em] text-[var(--brass)]">Master plan 01</span><span className="font-serif text-2xl">A considered beginning</span></div><ArrowRight className="h-5 w-5 text-[var(--brass)]" /></div>
                 </div>
                 <motion.div animate={{ y: [0, -7, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="quality-visual-coordinate absolute left-5 top-28 z-10 p-4 shadow-xl"><span className="mb-2 flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.22em]"><MapPin className="h-3 w-3" /> Plot verified</span><span className="font-mono text-xs">22°48&apos;N / 86°12&apos;E</span><span className="mt-2 block text-[10px] text-[var(--ink-muted)]">Jamshedpur, Jharkhand</span></motion.div>
@@ -378,7 +378,7 @@ export default function HomePage() {
       <section className="recent-project-section py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
-            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">RECENT PROJECT ——</div>
+            <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">RECENT PROJECT</div>
             <h2 className="mx-auto max-w-3xl text-4xl md:text-5xl font-bold text-navy">Choose your Dream Home</h2>
           </div>
 
@@ -460,7 +460,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 6B: Project Glimpses */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="text-[#763300] font-bold tracking-[0.2em] text-xs uppercase mb-4">Gallary</div>
@@ -472,9 +472,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { img: "/images/about/nature-focus.png", title: "1200 sq feet land plot landscape" },
-              { img: "/images/interior-living.png", title: "Aerial view of planned land parcels" },
-              { img: "/images/projects/royal-land-plots.png", title: "Land survey and marking in progress" },
+              { img: "/images/projects/land-plot-1200-sq-ft.webp", title: "1200 sq feet land plot landscape" },
+              { img: "/images/projects/residential-community.webp", title: "Aerial view of planned land parcels" },
+              { img: "/images/projects/land-survey-progress.webp", title: "Land survey and marking in progress" },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
@@ -491,7 +491,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 7: Reference-inspired middle search hero */}
       <section className="middle-dream-section py-24 md:py-28">
@@ -499,7 +499,7 @@ export default function HomePage() {
           <div className="middle-dream-shell">
             <div className="middle-floating-card middle-floating-card-1">
               <div className="middle-floating-card-media">
-                <Image src="/images/projects/royal-land-plots.png" alt="Royal Estates residential land plot" fill sizes="220px" className="object-cover" />
+                <Image src="/images/projects/land-plot-30x40.webp" alt="Royal Estates residential land plot" fill sizes="220px" className="object-cover" />
               </div>
               <div className="middle-floating-card-body">
                 <strong>1200 sq ft</strong>
@@ -509,7 +509,7 @@ export default function HomePage() {
             </div>
             <div className="middle-floating-card middle-floating-card-2">
               <div className="middle-floating-card-media">
-                <Image src="/images/projects/royal-property-selling.png" alt="Royal Estates property guidance" fill sizes="220px" className="object-cover" />
+                <Image src="/images/projects/land-plot-1200-sq-ft.webp" alt="Royal Estates 1200 square foot land plot" fill sizes="220px" className="object-cover" />
               </div>
               <div className="middle-floating-card-body">
                 <strong>500K sq ft</strong>
@@ -543,7 +543,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-bg.png"
+            src="/images/projects/developed-plotted-layout.webp"
             alt="Building Dark"
             fill
             sizes="100vw"
@@ -605,10 +605,10 @@ export default function HomePage() {
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
         {[
-          { num: "500,000", label: "Area Developed (Sq. Ft.)", bg: "stats-bg-1.png", icon: Building2 },
-          { num: "1,200+", label: "Clients Served", bg: "stats-bg-3.png", icon: Smile },
-          { num: "2018", label: "Established", bg: "stats-bg-2.png", icon: Home },
-          { num: "95%", label: "On-Time Completion", bg: "stats-bg-4.png", icon: Zap },
+          { num: "500,000", label: "Area Developed (Sq. Ft.)", bg: "projects/developed-plotted-layout.webp", icon: Building2 },
+          { num: "1,200+", label: "Clients Served", bg: "projects/client-certificate-handover-03.png", icon: Smile },
+          { num: "2018", label: "Established", bg: "projects/land-survey-progress.webp", icon: Home },
+          { num: "95%", label: "On-Time Completion", bg: "projects/residential-community.webp", icon: Zap },
         ].map((stat, i) => (
           <div key={i} className="stats-card group relative flex h-72 flex-col items-center justify-center overflow-hidden p-8 text-center md:h-[380px]">
             <Image
@@ -652,25 +652,25 @@ export default function HomePage() {
             {[
               {
                 title: "Residential Land Plot",
-                img: "projects/royal-land-plots.png",
+                img: "projects/land-plot-30x40.webp",
                 icon: MapPin,
                 desc: "Premium land parcels planned for future residential development and secure ownership.",
               },
               {
                 title: "Trusted Ownership",
-                img: "projects/royal-property-selling.png",
+                img: "projects/land-plot-1200-sq-ft.webp",
                 icon: Home,
                 desc: "Reliable service focused on clear, legal ownership support for every plot offered.",
               },
               {
                 title: "Custom Plot Sizes",
-                img: "projects/valley-view-retreat.png",
+                img: "projects/open-land-plot.webp",
                 icon: Building2,
                 desc: "Plot guidance tailored to client needs, site goals, and long-term preferences.",
               },
               {
                 title: "Sustainable Practices",
-                img: "projects/green-valley-villas.png",
+                img: "projects/residential-community.webp",
                 icon: Building,
                 desc: "Committed to climate-resilient land development and responsible planning practices.",
               }
@@ -742,10 +742,10 @@ export default function HomePage() {
             className="know-us-image-grid"
           >
             <div className="know-us-image-tile">
-              <Image src="/images/interior-living.png" alt="Royal Estates living planning visual" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+              <Image src="/images/projects/residential-community.webp" alt="Royal Estates residential community" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
             </div>
             <div className="know-us-image-tile">
-              <Image src="/images/projects/royal-land-plots.png" alt="Royal Estates land plot visual" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+              <Image src="/images/projects/land-plot-30x40.webp" alt="Royal Estates 30x40 land plot" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
             </div>
           </motion.div>
         </div>
@@ -766,14 +766,14 @@ export default function HomePage() {
             </Button>
             <div className="next-move-gallery" aria-hidden="true">
               {[
-                "/images/projects/royal-land-plots.png",
-                "/images/projects/royal-property-selling.png",
-                "/images/projects/green-valley-villas.png",
-                "/images/projects/valley-view-retreat.png",
-                "/images/projects/aravalli-greens.png",
+                "/images/projects/land-plot-30x40.webp",
+                "/images/projects/land-plot-1200-sq-ft.webp",
+                "/images/projects/residential-community.webp",
+                "/images/projects/open-land-plot.webp",
+                "/images/projects/developed-plotted-layout.webp",
               ].map((img, index) => (
                 <div key={img} className={`next-move-thumb next-move-thumb-${index + 1}`}>
-                  <Image src={img} alt="" fill sizes="180px" className="object-cover" />
+                  <Image src={img} alt={`Royal Estates property view ${index + 1}`} fill sizes="180px" className="object-cover" />
                 </div>
               ))}
             </div>

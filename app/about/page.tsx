@@ -83,7 +83,7 @@ export default function About() {
     <div className="w-full overflow-x-hidden bg-white font-sans">
       <section className="inner-hero relative flex min-h-[420px] items-center justify-center py-24 text-center">
         <Image
-          src="/images/hero-bg.png"
+          src="/images/projects/developed-plotted-layout.webp"
           alt="Royal Estates homes"
           fill
           priority
@@ -115,7 +115,7 @@ export default function About() {
             className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
           >
             <Image
-              src="/images/about/royal-estates-consultation.png"
+              src="/images/projects/project-signboard.png"
               alt="Royal Estates property consultation team"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -193,7 +193,7 @@ export default function About() {
             className="relative min-h-[360px] overflow-hidden rounded-[10px] shadow-xl md:min-h-[500px]"
           >
             <Image
-              src="/images/about/royal-estates-vision.png"
+              src="/images/projects/client-certificate-handover-06.png"
               alt="Royal Estates vision and planning"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

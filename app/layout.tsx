@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Royal Estates",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/images/projects/developed-plotted-layout.webp",
         width: 1200,
         height: 630,
         alt: "Royal Estates trusted land developer in Jamshedpur",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Royal Estates | Trusted Land Developer in Jamshedpur",
     description,
-    images: ["/opengraph-image.jpg"],
+    images: ["/images/projects/developed-plotted-layout.webp"],
   },
   icons: {
     icon: [

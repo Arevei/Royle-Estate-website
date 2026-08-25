@@ -11,42 +11,42 @@ const projects = [
     title: "Land Plot 30x40",
     group: "30x40",
     loc: "Jamshedpur",
-    img: "royal-land-plots.png",
+    img: "land-plot-30x40.webp",
     desc: "Premium 1200 sq ft land plot options planned for future residential development.",
   },
   {
     title: "Land Plot 1200 sq ft",
     group: "1200 Sq Ft",
     loc: "Jamshedpur",
-    img: "royal-property-selling.png",
+    img: "land-plot-1200-sq-ft.webp",
     desc: "Affordable plot options with ownership guidance, local support, and site visit coordination.",
   },
   {
     title: "Custom Plot Sizes",
     group: "Advisory",
     loc: "Jamshedpur",
-    img: "green-valley-villas.png",
+    img: "developed-plotted-layout.webp",
     desc: "Specialized 30x40 land plot guidance tailored to client needs and preferences.",
   },
   {
     title: "Trusted Ownership",
     group: "Ownership",
     loc: "Jamshedpur",
-    img: "valley-view-retreat.png",
+    img: "open-land-plot.webp",
     desc: "Reliable service focused on clear, legal ownership support for every plot offered.",
   },
   {
     title: "Secure Investment",
     group: "Advisory",
     loc: "Jamshedpur",
-    img: "aravalli-greens.png",
+    img: "residential-community.webp",
     desc: "Land development guidance for clients planning secure long-term real estate investments.",
   },
   {
     title: "Sustainable Practices",
     group: "Advisory",
     loc: "Jamshedpur",
-    img: "nilgiri-estates.png",
+    img: "land-survey-progress.webp",
     desc: "Climate-resilient land development and responsible planning practices.",
   },
 ];
@@ -59,7 +59,7 @@ export default function Projects() {
     <div className="w-full bg-zinc-50 pb-20 font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/projects/developed-plotted-layout.webp" alt="Aerial view of a developed land plot layout" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">

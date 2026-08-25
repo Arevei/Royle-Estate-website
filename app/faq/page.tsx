@@ -83,7 +83,7 @@ export default function FAQ() {
     <div className="w-full bg-white font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/projects/developed-plotted-layout.webp" alt="Aerial view of a developed land plot layout" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">

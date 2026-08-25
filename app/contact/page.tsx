@@ -15,7 +15,7 @@ export default function Contact() {
     <div className="w-full bg-white pb-20 font-sans">
       <section className="inner-hero relative flex h-[50vh] min-h-[400px] items-center justify-center pt-20">
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.png" alt="Contact Royal Estates" fill priority sizes="100vw" className="object-cover" />
+          <Image src="/images/projects/developed-plotted-layout.webp" alt="Aerial view of a developed land plot layout" fill priority sizes="100vw" className="object-cover" />
           <div className="inner-hero-overlay absolute inset-0" />
         </div>
         <div className="relative z-10 text-center">
@@ -39,7 +39,7 @@ export default function Contact() {
             >
               <div className="relative aspect-[4/3] min-h-[360px]">
                 <Image
-                  src="/images/about/royal-estates-consultation.png"
+                  src="/images/projects/client-certificate-handover-02.png"
                   alt="Royal Estates project planning team"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
